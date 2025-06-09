@@ -1,1 +1,1 @@
-# NoHateApp
+# NoHateLabs
