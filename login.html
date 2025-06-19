@@ -1,14 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="login.css" />
     <title>NoHateLabs</title>
-</head>
-<body>
-    <section id="login">
-
+  </head>
+  <body>
+    <section id="left-side">
+      <header class="header">
+        <img src="Imagenes/logo.png" alt="NoHate Labs Logo" class="logo" />
+        <p>NoHate Labs</p>
+      </header>
+      <h1 class="login-title">Iniciar Sesión</h1>
+      <div class="login-container">
+        <form class="login-form">
+          <div class="input-group">
+            <div class="input-icon">
+              <img
+                src="Imagenes/user-icon.png"
+                alt="User Icon"
+                class="input-icon-img"
+              />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Correo electrónico"
+              />
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="input-icon">
+              <img
+                src="Imagenes/lock-icon.png"
+                alt="Lock Icon"
+                class="input-icon-img"
+              />
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                placeholder="Contraseña"
+              />
+            </div>
+          </div>
+          <button type="submit" class="login-btn">Iniciar Sesión</button>
+          <button type="button" class="google-btn">
+            <img
+              src="Imagenes/google-icon.png"
+              alt="Google Icon"
+              class="google-icon"
+            />
+            Iniciar sesión con Google
+          </button>
+        </form>
+        <p class="forgot-link">
+          ¿Olvidaste tu contraseña?
+          <a href="/recuperar">Recupera tu contraseña</a>
+        </p>
+        <p class="register-link">
+          ¿No tienes una cuenta? <a href="/register">Registrate</a>
+        </p>
+      </div>
     </section>
-</body>
+    <section id="right-side">
+      <div class="right-side-boxes">
+        <div class="box dark-blue"></div>
+        <div class="box light-blue">
+          <img
+            src="Imagenes/login-image.png"
+            alt="Login Illustration"
+            class="login-image"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
