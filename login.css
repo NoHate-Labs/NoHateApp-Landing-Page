@@ -6,7 +6,7 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* Right side styles (Image) */
@@ -94,7 +94,7 @@ body {
   padding: 2rem;
   border-radius: 20px;
   width: 100%;
-  max-width: 30dvw;
+  max-width: 40dvw;
 }
 
 .login-form {
@@ -130,7 +130,7 @@ input[type="password"] {
   outline: none;
   background: transparent;
   flex: 1;
-  font-size: 16px;
+  font-size: 1rem;
   color: #333;
   height: 80px;
   font-family: Quicksand, sans-serif;
@@ -144,7 +144,7 @@ input[type="password"] {
   border-radius: 12px;
   color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
   margin-top: 1rem;
   cursor: pointer;
   font-family: Quicksand, sans-serif;
@@ -161,7 +161,7 @@ input[type="password"] {
   padding: 0.75rem 2rem;
   margin-top: 1rem;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
   font-size: 20px;
   font-family: Quicksand, sans-serif;
   width: fit-content;
@@ -189,17 +189,18 @@ input[type="password"] {
   color: #000;
   text-decoration: underline;
   cursor: pointer;
-    font-family: Quicksand, sans-serif;
+  font-family: Quicksand, sans-serif;
 }
 
 /* Responsive styles */
 /* Tablet styles (portrait) */
-@media (max-width: 1100px) and (orientation: portrait) {
+@media (max-width: 1200px) and (orientation: portrait) {
   #left-side {
     gap: 10px;
   }
+
   .login-container {
-    max-width: 60vw;
+    max-width: 60dvw;
     padding: 1.5rem;
   }
   #left-side h1 {
@@ -214,8 +215,8 @@ input[type="password"] {
   }
   .login-image {
     left: -15%;
-    height: 65%;
-    max-width: 70dvw;
+    height: 85%;
+    max-width: 75dvw;
   }
   #right-side {
     flex-direction: column;
@@ -224,7 +225,7 @@ input[type="password"] {
     overflow: hidden;
   }
   .right-side-boxes {
-    width: 80%;
+    width: 90%;
     height: 60%;
   }
 
@@ -232,12 +233,12 @@ input[type="password"] {
   .register-link {
     margin-top: 1rem;
     text-align: center;
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
 /* Tablet styles (landscape) */
-@media (max-width: 1100px) and (orientation: landscape) {
+@media (max-width: 1200px) and (orientation: landscape) {
   #left-side {
     gap: 10px;
   }
@@ -249,15 +250,15 @@ input[type="password"] {
     font-size: 36px;
   }
   .header p {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .logo {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
   }
   .login-image {
-    left: -15%;
-    height: 65%;
+    left: -10%;
+    height: 85%;
     max-width: 40dvw;
   }
   .right-side-boxes {
@@ -290,7 +291,7 @@ input[type="password"] {
     padding: 1.5rem 0.5rem;
   }
   .header p {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .login-container {
     max-width: 95vw;
@@ -298,102 +299,31 @@ input[type="password"] {
   }
   .right-side-boxes {
     width: 95%;
-    height: 40vw;
+    height: 100%;
     min-height: 180px;
     max-height: 260px;
   }
   .login-image {
     position: absolute;
-    width: 120px;
+    width: 100%;
     height: auto;
-    margin: 0 auto;
-    display: block;
+    left: auto;
+    right: 0;
   }
-  
+
   .forgot-link,
   .register-link {
     margin-top: 1rem;
     text-align: center;
     font-size: 0.75rem;
   }
+  #right-side {
+    height: 30dvh;
+  }
 }
 
 /* Extra small devices (phones) */
 @media (max-width: 600px) {
-    #left-side {
-      padding: 3rem 1rem;
-      align-items: center;
-      gap: 40px;
-    }
-  
-    #right-side {
-      width: 100%;
-      height: 50vh;
-      padding: 1rem;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    #left-side h1 {
-      font-size: 24px;
-    }
-    .header {
-      top: 10px;
-      left: 10px;
-    }
-    .header p {
-      font-size: 16px;
-    }
-    .logo {
-      width: 36px;
-      height: 36px;
-    }
-    .login-container {
-      padding: 0.5rem;
-      border-radius: 10px;
-    }
-    .input-icon {
-      padding: 0.25rem;
-    }
-    input[type="email"],
-    input[type="password"] {
-      font-size: 14px;
-      height: 48px;
-      max-width: 80dvw;
-    }
-    .login-btn,
-    .google-btn {
-      padding: 12px 18px;
-      font-size: 14px;
-    }
-    .google-icon {
-      height: 24px;
-      width: 24px;
-    }
-    .forgot-link,
-    .register-link {
-      font-size: 14px;
-    }
-  
-    .login-image {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      max-width: 100dvw;
-      max-height: 80dvh;
-    }
-    
-    .forgot-link,
-    .register-link {
-      margin-top: 1rem;
-      text-align: center;
-      font-size: 0.75rem;
-    }
-  }
-  
-
-/* Extra small devices (phones) */
-@media (max-width: 500px) {
   #left-side {
     padding: 3rem 1rem;
     align-items: center;
@@ -416,7 +346,7 @@ input[type="password"] {
     left: 10px;
   }
   .header p {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .logo {
     width: 36px;
@@ -456,11 +386,100 @@ input[type="password"] {
     max-width: 100dvw;
     max-height: 80dvh;
   }
-  
+
   .forgot-link,
   .register-link {
     margin-top: 1rem;
     text-align: center;
     font-size: 0.75rem;
+  }
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 500px) {
+  #left-side {
+    padding: 3rem 1rem;
+    align-items: center;
+    gap: 40px;
+  }
+
+  #right-side {
+    width: 100%;
+    height: 50vh;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #left-side h1 {
+    font-size: 24px;
+  }
+  .header {
+    top: 10px;
+    left: 10px;
+  }
+  .header p {
+    font-size: 1rem;
+  }
+  .logo {
+    width: 36px;
+    height: 36px;
+  }
+  .login-container {
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+  .input-icon {
+    padding: 0.25rem;
+  }
+  input[type="email"],
+  input[type="password"] {
+    font-size: 14px;
+    height: 48px;
+    max-width: 80dvw;
+  }
+  .login-btn,
+  .google-btn {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+  .google-icon {
+    height: 24px;
+    width: 24px;
+  }
+  .forgot-link,
+  .register-link {
+    font-size: 14px;
+  }
+
+  .login-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 100dvw;
+    max-height: 80dvh;
+  }
+
+  .forgot-link,
+  .register-link {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-height: 800px) {
+  input[type="email"],
+  input[type="password"] {
+    height: 50px;
+  }
+
+  .login-btn {
+    padding: 24px 24px;
+  }
+
+  .forgot-link,
+  .register-link {
+    font-size: 1rem;
   }
 }
