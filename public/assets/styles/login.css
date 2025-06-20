@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "Quicksand", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f2f2f2;
+  display: flex;
+}
+
+/* LAYOUT PRINCIPAL */
+#left-side,
+#right-side {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+#left-side {
+  flex-direction: column;
+  background: #f2f2f2;
+  gap: 2rem;
+  padding: 2rem;
+  position: relative;
+}
+
+#right-side {
+  background: #5de0e6;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+/* CABECERA */
+.header {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+}
+
+.header p {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* TITULO */
+#left-side h1 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #5de0e6;
+  margin: 0 0 1rem 0;
+}
+
+/* CONTENEDOR LOGIN */
+.login-container {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+  box-sizing: border-box
+}
+
+.input-group {
+  width: 100%;
+}
+
+.input-icon {
+  display: flex;
+  align-items: center;
+  background: #c4f8fc;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.input-icon-img {
+  width: 20px;
+  margin-right: 0.75rem;
+}
+
+input[type="email"],
+input[type="password"] {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+  height: 3rem;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* BOTONES */
+.login-btn,
+.google-btn {
+  border: none;
+  border-radius: 0.75rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  padding: 1rem 2rem;
+  margin-top: 0.5rem;
+  max-width: 400px;
+}
+
+.login-btn {
+  background: linear-gradient(0deg, #5de0e6, #5de0e6);
+  color: #fff;
+  box-shadow: 0 0.5rem 1.5rem #0001;
+}
+
+.login-btn:hover {
+  background: linear-gradient(0deg, #4bcad3, #5de0e6);
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #222;
+  border: 1px solid #0002;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.google-btn:hover {
+  background: #f2f2f2;
+}
+
+.google-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.forgot-link {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* ENLACES */
+.register-link {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.forgot-link a,
+.register-link a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* LADO DERECHO (IMAGEN) */
+.right-side-box {
+  width: 60%;
+  height: 55%;
+  border-radius: 2.5rem;
+  background: #ffffff36;
+  backdrop-filter: blur(14px);
+  border: 1px solid #ffffff85;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: visible;
+}
+
+.login-image {
+  position: absolute;
+  bottom: 0;
+  width: 120%;   /* que la imagen sea más grande que el contenedor */
+  left: -10%;    /* centra un poco la imagen fuera del contenedor */
+  z-index: 100;
+}
+
+/* MEDIA QUERIES RESPONSIVAS */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  #left-side,
+  #right-side {
+    min-height: 60vh;
+    padding: 1.5rem;
+    gap: 4px;
+  }
+  #left-side {
+    padding: 5rem 1rem 1rem 1rem;
+  }
+  .header {
+    top: 1rem;
+    left: 1rem;
+  }
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+  #left-side h1 {
+    font-size: 2rem;
+  }
+  .login-container {
+    width: 100%;
+    padding: 1.25rem;
+  }
+  .right-side-box {
+    width: 75%;
+    height: 60%;
+  }
+  .login-image {
+    left: -10%;
+
+  }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  body {
+    flex-direction: column;
+    min-height: unset;
+  }
+
+  #left-side,
+  #right-side {
+    width: 100%;
+    min-height: 100dvh;
+    padding: 1rem 0.5rem;
+    flex: unset;
+    height: auto;
+  }
+  #left-side {
+    gap: 1.5rem;
+    padding: 2rem 0.5rem;
+  }
+  
+  .header {
+    position: static;
+    margin-bottom: 1rem;
+  }
+  .logo {
+    width: 36px;
+    height: 36px;
+  }
+  #left-side h1 {
+    font-size: 1.5rem;
+  }
+  .login-container {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-sizing: border-box
+  }
+  .input-icon {
+    padding: 0.25rem 0.5rem;
+  }
+  input[type="email"],
+  input[type="password"] {
+    font-size: 0.95rem;
+    height: 2.5rem;
+  }
+  .login-btn,
+  .google-btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+  }
+  .google-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .right-side-box {
+    width: 80%;
+    height: 60vh;
+    min-height: 220px;
+  }
+  .login-image {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    right: 0;
+    max-width: 100vw;
+    max-height: 80vh;
+  }
+}
+
+/* EXTRA SMALL */
+@media (max-width: 480px) {
+  #left-side {
+    padding: 1rem;
+    gap: 1rem;
+    width: 100%;
+  }
+  .header {
+    gap: 0.5rem;
+  }
+  .logo {
+    width: 28px;
+    height: 28px;
+  }
+  #left-side h1 {
+    font-size: 1.1rem;
+  }
+  .login-container {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  .input-icon {
+    padding: 0.15rem 0.25rem;
+  }
+  input[type="email"],
+  input[type="password"] {
+    font-size: 0.85rem;
+    height: 2rem;
+  }
+  .login-btn,
+  .google-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+  .google-icon {
+    width: 18px;
+    height: 18px;
+  }
+  .right-side-box {
+    width: 100%;
+    height: 50vh;
+    min-height: 80px;
+    border-radius: 0.5rem;
+  }
+  .login-image {
+    max-width: 90vw;
+  }
+  .forgot-link,
+  .register-link {
+    font-size: 0.85rem;
+  }
+}
