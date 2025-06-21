@@ -419,3 +419,14 @@ body {
         font-size: 1.1rem;
     }
 }
+/* Pantallas grandes */
+@media (min-width: 1400px) {
+    .ChatbotImagen img,
+    .ForosImagen img,
+    .RegistroImagen img,
+    .RecursosImagen img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
