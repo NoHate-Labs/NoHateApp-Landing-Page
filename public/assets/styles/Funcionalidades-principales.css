@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F2F2F2;
+}
+.top-header{
+    position: fixed;
+    background-color: #5DE0E6;
+    width: 100%;
+    height: 6rem;
+    align-items: center;
+    z-index: 100;
+    padding: 0 1.5rem;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+.ImagenTitulo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 1.5rem;
+    gap: 1rem;
+}
+.logo img{
+    width: auto;
+    height: 4rem;
+}
+.Titulo{
+    font-family: Quicksand, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color:#1A1A1A;
+}
+.MenuBoton{
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 0rem;
+}
+.MenuHorizontal{
+    font-family: Lato, sans-serif;
+    font-weight: extra-bold;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    gap: 1rem;
+}
+.MenuHorizontal li{
+    font-size: 14px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: #C6F7FF;
+    border-radius: 20px;
+}
+.MenuHorizontal li a{
+    text-decoration: none;
+    color: #1A1A1A;
+    font-weight: bold;
+}
+.MenuHorizontal li:hover{
+    opacity: 80%;
+}
+.FuncionalidadesPrincipales{
+    padding:6rem 2rem 3rem;
+}
+.FuncionalidadesPrincipales h2{
+    font-family: Quicksand, sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #5DE0E6;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.ReporteAnonimo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+.ReporteImagen{
+    width: 602px;
+    height: 335px;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+.ReporteImagen img{
+    transform: scale(0.5);
+    transform-origin: left top;
+}
+.ReporteTexto{
+    flex: 1;
+    color: #1A1A1A;
+    text-align: center;
+}
+.ReporteTexto h3{
+    font-family: Quicksand, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.ReporteTexto p{
+    font-family: Lato, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+.ChatbotEmpatico{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+.ChatbotImagen{
+    width: 602px;
+    height: 335px;
+    flex: 1;
+}
+.ChatbotImagen img{
+    width: 100%;
+}
+.ChatbotTexto{
+    flex: 1;
+    color: #1A1A1A;
+    text-align: center;
+}
+.ChatbotTexto h3{
+    font-family: Quicksand, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.ChatbotTexto p{
+    font-family: Lato, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+.ForosDiscusion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+    padding: 2rem;
+}
+.ForosImagen{
+    width: 602px;
+    height: 335px;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+.ForosImagen img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+    transform-origin: center;
+}
+.ForosTexto{
+    flex: 1;
+    color: #1A1A1A;
+    text-align: center;
+}
+.ForosTexto h3{
+    font-family: Quicksand, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.ForosTexto p{
+    font-family: Lato, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+.RegistroEmociones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+    padding: 2rem;
+}
+.RegistroImagen{
+    width: 602px;
+    height: 335px;
+    flex: 1;
+}
+.RegistroImagen img{
+    height: 100%;
+    width: 100%;
+}
+.RegistroTexto{
+    flex: 1;
+    color: #1A1A1A;
+    text-align: center;
+}
+.RegistroTexto h3{
+    font-family: Quicksand, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.RegistroTexto p{
+    font-family: Lato, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+.RecursosEducativos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+    padding: 2rem;
+}
+.RecursosImagen{
+    width: 602px;
+    height: 335px;
+    flex: 1;
+}
+.RecursosImagen img{
+    height: 100%;
+    width: 100%;
+}
+.RecursosTexto{
+    flex: 1;
+    color: #1A1A1A;
+    text-align: center;
+}
+.RecursosTexto h3{
+    font-family: Quicksand, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.RecursosTexto p{
+    font-family: Lato, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+/* Media Queries Responsivas */
+/* Moviles*/
+@media (max-width: 700px) {
+    .top-header{
+        justify-content: space-between;
+        padding:0;
+    }
+    .ImagenTitulo{
+        padding-left:2rem;
+    }
+    .Titulo{
+        font-size: 1.2rem;
+        padding-right: 0;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .MenuBoton {
+        display: block;
+        padding-right:2rem;
+    }
+    .MenuHorizontal{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position:absolute;
+        top: 6rem;
+        left: 0;
+        justify-content: none;
+    }
+    .MenuHorizontal.active {
+        display: flex;
+    }
+    .MenuHorizontal li {
+        border-bottom: 1px solid #ccc;
+        text-align: left;
+        border-radius: 0px;
+    }
+
+    .FuncionalidadesPrincipales h2 {
+        font-size: 2rem;
+    }
+
+    .ReporteAnonimo,
+    .ChatbotEmpatico,
+    .ForosDiscusion,
+    .RegistroEmociones,
+    .RecursosEducativos {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .ReporteImagen,
+    .ChatbotImagen,
+    .ForosImagen,
+    .RegistroImagen,
+    .RecursosImagen {
+        width: 100%;
+        height: auto;
+        order: -1;/*Invierte el orden del flex, o sea, la imagen va primero*/
+    }
+
+    .ReporteImagen img,
+    .ChatbotImagen img,
+    .ForosImagen img,
+    .RegistroImagen img,
+    .RecursosImagen img {
+        width: 100%;
+        height: auto;
+        transform: none !important;/* Elimina cualquier cambio hecho, el important es para
+        que afecte a cualquier cosa ignorando otros cambios*/
+    }
+
+    .ReporteTexto h3,
+    .ChatbotTexto h3,
+    .ForosTexto h3,
+    .RegistroTexto h3,
+    .RecursosTexto h3 {
+        font-size: 1.5rem;
+    }
+
+    .ReporteTexto p,
+    .ChatbotTexto p,
+    .ForosTexto p,
+    .RegistroTexto p,
+    .RecursosTexto p {
+        font-size: 1rem;
+    }
+}
+/*Tablets y pantallas medianas */
+@media (min-width:701px) and (max-width: 1024px){
+    .top-header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 10rem;
+        padding: 1rem;
+        gap:0.5rem;
+    }
+
+    .Titulo {
+        font-size: 1.8rem;
+        padding-right: 0;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .MenuHorizontal {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+    .MenuHorizontal li a {
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    .FuncionalidadesPrincipales{
+        padding-top:10rem;
+    }
+
+    .ReporteAnonimo,
+    .ChatbotEmpatico,
+    .ForosDiscusion,
+    .RegistroEmociones,
+    .RecursosEducativos {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .ReporteImagen,
+    .ChatbotImagen,
+    .ForosImagen,
+    .RegistroImagen,
+    .RecursosImagen {
+        width: 100%;
+        height: auto;
+        order: -1;/*Invierte el orden del flex, o sea, la imagen va primero*/
+    }
+
+    .ReporteImagen img,
+    .ChatbotImagen img,
+    .ForosImagen img,
+    .RegistroImagen img,
+    .RecursosImagen img {
+        width: 100%;
+        height: auto;
+        transform: none !important;/* Elimina cualquier cambio hecho, el important es para
+        que afecte a cualquier cosa ignorando otros cambios*/
+    }
+
+    .ReporteTexto h3,
+    .ChatbotTexto h3,
+    .ForosTexto h3,
+    .RegistroTexto h3,
+    .RecursosTexto h3 {
+        font-size: 1.75rem;
+    }
+
+    .ReporteTexto p,
+    .ChatbotTexto p,
+    .ForosTexto p,
+    .RegistroTexto p,
+    .RecursosTexto p {
+        font-size: 1.1rem;
+    }
+}
+/* Pantallas grandes */
+@media (min-width: 1400px) {
+    .ChatbotImagen img,
+    .ForosImagen img,
+    .RegistroImagen img,
+    .RecursosImagen img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
