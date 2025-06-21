@@ -3,14 +3,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Funcionalidades Principales</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets\styles\Funcionalidades-principales.css">
 </head>
 <body> 
+    <!--Barra de navegacion-->
    <nav class="top-header">
-    <a class="logo" href="index.html">
-        <img src="Imagenes/logo.png" alt="Logo"/>
-    </a>
-    <h1 class="Titulo">NoHate Labs</h1>
+    <!--Logo y Titulo-->
+    <div class="ImagenTitulo">
+        <a class="logo" href="index.html">
+            <img src="assets\images\logo.png" alt="Logo"/>
+        </a>
+        <h1 class="Titulo">NoHate Labs</h1>
+    </div>
+    <!--Boton de navegacion para moviles-->
+    <button class="MenuBoton" aria-label="Abrir menú">
+        &#9776;
+    </button>
+   <!--Botones del menu de navegacion horizontal-->
     <ul class="MenuHorizontal">
         <li>
             <a href="">Inicio</a>
@@ -29,11 +38,12 @@
         </li>
     </ul>
    </nav>
+   <!--Funcionalidades principales-->
    <section class="FuncionalidadesPrincipales">
        <h2>Funcionalidades Principales</h2>
        <div class="ReporteAnonimo">
             <div class="ReporteImagen">
-                <img src="Imagenes/ReporteAnonimo.jpg" alt="Reporte Anónimo"/>
+                <img src="assets\images\ReporteAnonimo.jpg" alt="Reporte Anónimo"/>
             </div>
             <div class="ReporteTexto">
                 <h3>Reporte Anonimo de Acoso</h3>
@@ -46,12 +56,12 @@
                 <p>Con nuestro ChatBot, recibe orientación inmediata que te escuchara y te ayudara en diversas situaciones que le expliques. Disponibilidad 24/7.</p>
             </div>
             <div class="ChatbotImagen">
-                <img src="Imagenes/Chatbot.jpeg" alt="Chatbot Empático"/>
+                <img src="assets\images\Chatbot.jpeg" alt="Chatbot Empático"/>
             </div>
        </div>
        <div class="ForosDiscusion">
             <div class="ForosImagen">
-                <img src="Imagenes/Foros.png" alt="Foros de Discusión"/>
+                <img src="assets\images\Foros.png" alt="Foros de Discusión"/>
             </div>
             <div class="ForosTexto">
                     <h3>Foros de Discusión</h3>
@@ -64,12 +74,12 @@
                 <p>Una herramienta que mide tus emociones diarias dependiendo de lo que ves y recibes en las redes sociales. Te ayuda a no descuidar tu salud mental y a no ignorar los problemas.</p>
             </div>
             <div class="RegistroImagen">
-                <img src="Imagenes/RegistroEmociones.png" alt="Registro de Emociones"/>
+                <img src="assets\images\RegistroEmociones.png" alt="Registro de Emociones"/>
             </div>
        </div>
        <div class="RecursosEducativos">
             <div class="RecursosImagen">
-                <img src="Imagenes/RecursosEducativos.jpg" alt="Recursos Educativos"/>
+                <img src="assets\images\RecursosEducativos.jpg" alt="Recursos Educativos"/>
             </div>  
             <div class="RecursosTexto">
                 <h3>Recursos educativos para la buena salud mental</h3>
@@ -77,5 +87,7 @@
             </div>
        </div>
    </section>
+   <!--Javascript del boton del menu para responsive-->
+   <script src="assets\scripts\Funcionalidades-principales.js"></script>
 </body>
 </html>
