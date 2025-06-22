@@ -1,0 +1,169 @@
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  background: #f2f2f2;
+}
+
+h1 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: #5de0e6;
+  margin: 40px 0;
+}
+
+h2, h3 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 32px;
+  margin: 0;
+}
+
+h4, p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  margin: 0.5rem 0;
+}
+
+/* HEADER Y MENÚ */
+.top-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #5de0e6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.5rem;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+}
+
+.logo img {
+  height: 4.3rem;
+  width: auto;
+}
+
+.logo h1 {
+  font-family: "Quicksand", sans-serif;
+  color: #1a1a1a;
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* MENÚ NAVEGACIÓN */
+.menu-horizontal {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+
+.menu-horizontal li {
+  background-color: #c6f7ff;
+  border-radius: 17px;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+}
+
+.menu-horizontal li a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1a1a1a;
+}
+
+main {
+  padding-top: 6rem;
+}
+
+.titulo {
+  text-align: center;
+  color: #5de0e6;
+  margin: 40px 0;
+}
+
+.beneficio,
+.apoyo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  flex-wrap: wrap;
+}
+
+.beneficio img,
+.apoyo img {
+  width: 45%;
+  height: auto;
+}
+
+.beneficio div {
+  transform: translateX(-200px);
+}
+
+.apoyo div {
+  transform: translateX(200px);
+  padding-left: 60px;
+}
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-horizontal {
+    display: none;
+    flex-direction: column;
+    background-color: #c6f7ff;
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    z-index: 999;
+  }
+
+  .menu-horizontal.show {
+    display: flex;
+  }
+
+  .beneficio,
+  .apoyo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .beneficio img,
+  .apoyo img {
+    order: -1; 
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .beneficio div,
+  .apoyo div {
+    padding: 0;
+    transform: none;
+  }
+}
+
