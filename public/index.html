@@ -2,35 +2,40 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NoHate Labs - Pagina principal</title>
-    <link rel="stylesheet" href="Pagina-principal.css" />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
   </head>
   <body>
     <!-- MENÚ SUPERIOR -->
     <nav class="top-header">
-      <a href="#" class="logo">
-        <img src="Imagenes/NOHATE-LABS-logo.jpg" alt="Logo" />
-        <h1>NoHate Labs</h1>
-      </a>
+      <div class="contenido-logo">
+        <a class="logo" href="index.html">
+          <img src="assets/images/logo.png" alt="Logo" />
+        </a>
+        <h1 class="titulo-logo">NoHate Labs</h1>
+      </div>
       <!-- BOTÓN HAMBURGUESA -->
       <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
       <!-- MENÚ DE NAVEGACIÓN -->
       <ul class="menu-horizontal">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Funciones Principales</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li>
+          <a href="Funcionalidades-principales.html">Funciones Principales</a>
+        </li>
         <li><a href="#">Beneficios</a></li>
-        <li><a href="#">Comienza Ahora</a></li>
-        <li><a href="#">Inicia Sesión</a></li>
+        <li><a href="ComienzaAhora.html">Comienza Ahora</a></li>
+        <li><a href="login.html">Inicia Sesión</a></li>
       </ul>
     </nav>
     <!-- SECCIÓN INICIO -->
     <section class="inicio">
       <div class="parte-1">
         <div class="text-parte-1">
-          <h1 class="parte-1-titulo">
+          <h2 class="parte-1-titulo">
             Te escuchamos sin juzgar.<br />
             Te cuidamos con tecnología.
-          </h1>
+          </h2>
           <div class="inicio-contenido">
             <p>
               Sabemos que no siempre es fácil hablar. Por eso creamos un espacio
@@ -41,7 +46,7 @@
           </div>
         </div>
         <div class="inicio-imagen">
-          <img src="Imagenes/img_inicio.jpg" alt="Niño con un celular" />
+          <img src="assets/images/img_inicio.jpg" alt="Niño con un celular" />
         </div>
       </div>
     </section>
@@ -50,7 +55,7 @@
       <div class="quienes-somos-contenido">
         <div class="Separador-Quienes-Somos">
           <div class="upc-logo">
-            <img src="Imagenes/upc-logo.png" alt="logo-upc" />
+            <img src="assets/images/upc-logo.png" alt="logo-upc" />
           </div>
           <div class="upc-texto">
             <p>
@@ -61,7 +66,7 @@
         </div>
         <div class="Separador-Quienes-Somos">
           <div class="lupa">
-            <img src="Imagenes/lupa.png" alt="lupa" />
+            <img src="assets/images/lupa.png" alt="lupa" />
           </div>
           <div class="lupa-texto">
             <p>
@@ -73,7 +78,7 @@
         </div>
         <div class="Separador-Quienes-Somos">
           <div class="acierto">
-            <img src="Imagenes/acierto.png" alt="acierto" />
+            <img src="assets/images/acierto.png" alt="acierto" />
           </div>
           <div class="acierto-texto">
             <p>
@@ -84,7 +89,7 @@
         </div>
         <div class="Separador-Quienes-Somos">
           <div class="celular">
-            <img src="Imagenes/celular.png" alt="celular" />
+            <img src="assets/images/celular.png" alt="celular" />
           </div>
           <div class="celular-texto">
             <p>
@@ -107,6 +112,18 @@
         </p>
       </div>
     </section>
-    <script src="main.js"></script>
+
+    <footer class="footer">
+      <div class="contenido_footer1">
+        <p>NoHate Labs - 2025</p>
+      </div>
+      <div class="contenido_footer2">
+        <p>Contáctanos en:</p>
+        <img src="assets/images/LogoInstagram.png" alt="Logo de Instagram" />
+        <img src="assets/images/LogoCorreo.png" alt="Logo del correo" />
+      </div>
+    </footer>
+    
+    <script src="assets/scripts/main.js"></script>
   </body>
 </html>

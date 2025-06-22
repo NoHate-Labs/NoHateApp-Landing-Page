@@ -1,28 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap");
+
 body {
-  height: 100%;
-  overflow-x: hidden;
-  font-family: "Quicksand", sans-serif;
-  overflow-x: hidden;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: #f2f2f2;
 }
+
 .contenido_principal {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-.topheader {
-  position: fixed;
-  background-color: #5de0e6;
-  width: 100%;
-  height: 6rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1.5rem;
-  z-index: 100;
+.top-header {
+  position: fixed; /* Fija el menú en la parte superior */
+  background-color: #5de0e6; /* Fondo celeste brillante para visibilidad */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  z-index: 100; /* Se asegura de estar por encima de otros elementos */
+  height: 6.25rem; /* Altura fija del menú (100px) */
+  display: flex; /* Activa Flexbox para alinear los elementos internos */
+  align-items: center; /* Centrado vertical */
+  justify-content: space-between; /* Separación entre logo y menú */
+  padding: 0 1.5rem; /* Espacio horizontal interno del menú */
   box-sizing: border-box;
 }
 
@@ -30,6 +31,12 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 .logo img {
@@ -41,6 +48,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   color: #1a1a1a;
+  font-family: "Quicksand", sans-serif;
 }
 
 .menu_boton {
@@ -60,16 +68,17 @@ body {
 }
 
 .menu_horizontal li {
-  font-size: 14px;
   padding: 0.5rem 1rem;
   background-color: #c6f7ff;
   border-radius: 20px;
 }
 
 .menu_horizontal li a {
+  font-size: 14px;
   text-decoration: none;
   color: #1a1a1a;
   font-weight: bold;
+  font-family: "Lato", sans-serif;
 }
 
 .comienza_ahora {
@@ -104,12 +113,14 @@ body {
   font-size: 3rem;
   font-weight: 700;
   color: #1a1a1a;
+  font-family: "Quicksand", sans-serif;
 }
 
 .comienza_ahora-texto1 p {
   font-size: 2rem;
   font-weight: 700;
   color: #1a1a1a;
+  font-family: "Quicksand", sans-serif;
 }
 
 .aplicaciones {
@@ -135,6 +146,7 @@ body {
   font-weight: 700;
   text-align: center;
   color: #1a1a1a;
+  font-family: "Quicksand", sans-serif;
 }
 
 .footer {
@@ -154,6 +166,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   color: #1a1a1a;
+  font-family: "Quicksand", sans-serif;
 }
 
 .contenido_footer2 {
@@ -170,7 +183,7 @@ body {
 /* Media Queries Responsivas */
 /* Moviles*/
 @media (max-width: 700px) {
-  .topheader {
+  .top-header {
     padding: 0 1rem;
   }
 
@@ -186,13 +199,11 @@ body {
     top: 5rem;
     left: 0;
     gap: 0;
+    padding: 0;
   }
 
   .menu_horizontal.active {
     display: flex;
-  }
-  .menu_horizontal ul {
-    padding: 0;
   }
   .menu_horizontal li {
     width: 100%;
@@ -238,6 +249,7 @@ body {
   .contenido_footer1 p,
   .contenido_footer2 p {
     font-size: 1.5rem;
+    font-family: "Quicksand", sans-serif;
   }
   .contenido_footer2 img {
     width: 1.7rem;
@@ -247,11 +259,6 @@ body {
 
 /* Tablets y pantallas medianas */
 @media (min-width: 701px) and (max-width: 1024px) {
-  body {
-    overflow-x: hidden;
-    width: 100%;
-  }
-
   .comienza_ahora {
     width: 100%;
     padding-top: 6rem;

@@ -6,6 +6,9 @@ body {
   padding: 0rem; /* Espaciado interno general */
   box-sizing: border-box; /* Incluye padding y border en los tamaños */
   background-color: #f2f2f2; /* Color de fondo suave */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .top-header {
@@ -13,7 +16,7 @@ body {
   background-color: #5de0e6; /* Fondo celeste brillante para visibilidad */
   width: 100%; /* Ocupa todo el ancho de la pantalla */
   z-index: 100; /* Se asegura de estar por encima de otros elementos */
-  height: 5rem; /* Altura fija del menú (80px) */
+  height: 6.25rem; /* Altura fija del menú (100px) */
   display: flex; /* Activa Flexbox para alinear los elementos internos */
   align-items: center; /* Centrado vertical */
   justify-content: space-between; /* Separación entre logo y menú */
@@ -21,7 +24,7 @@ body {
   box-sizing: border-box;
 }
 
-.logo h1 {
+.titulo-logo {
   color: #1a1a1a;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
@@ -29,23 +32,27 @@ body {
   margin: 0;
 }
 
+.contenido-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .logo {
   display: flex;
   align-items: center;
   text-decoration: none;
-  flex: 0.9; /* Permite que el logo ocupe un espacio flexible */
 }
 
 .logo img {
-  height: 4.3rem; /* Altura del logo */
-  width: auto; /* Mantiene proporción automática */
-  margin-right: 10px;
+  height: 5.063rem; /* Altura del logo */
+  width: 5.063rem; /* Mantiene proporción automática */
 }
 
 .menu-horizontal {
   list-style: none;
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   margin: 0;
   padding: 0;
   font-family: "Lato", sans-serif;
@@ -53,17 +60,17 @@ body {
 }
 
 .menu-horizontal li {
-  background-color: #c6f7ff; /* Fondo del cuadro */
-  border-radius: 17px; /* Bordes redondeados */
   padding: 0.5rem 1rem;
-  transition: background-color 0.3s;
+  background-color: #c6f7ff;
+  border-radius: 20px;
 }
 
 .menu-horizontal li a {
+  font-size: 14px;
   text-decoration: none;
-  color: #1a1a1a; /* Color del texto */
+  color: #1a1a1a;
   font-weight: bold;
-  font-family: "Lato", sans-serif; /* Solo el menú usa Lato */
+  font-family: "Lato", sans-serif;
 }
 
 /* fondo */
@@ -218,7 +225,84 @@ body {
   max-width: 1000px;
 }
 
-@media screen and (orientation: portrait) {
+/* Oculta el botón hamburguesa en escritorio */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1a1a1a;
+}
+
+.footer {
+  margin-top: auto;
+  background-color: #5de0e6;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.contenido_footer1 p,
+.contenido_footer2 p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-family: "Quicksand", sans-serif;
+}
+
+.contenido_footer2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contenido_footer2 img {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+/* Media Queries Responsivas */
+/* Moviles*/
+@media (max-width: 700px) {
+  .top-header {
+    padding: 0 1rem;
+  }
+
+  .titulo-logo {
+    font-size: 1.2rem;
+    padding-right: 0;
+    text-align: center;
+    width: 100%;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .menu-horizontal {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    gap: 0rem;
+    padding: 0;
+  }
+  .menu-horizontal.active {
+    display: flex;
+  }
+  .menu-horizontal li {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    border-radius: 0px;
+  }
+
   .parte-1 {
     flex-direction: column;
     align-items: center;
@@ -262,37 +346,59 @@ body {
     height: auto;
     border-radius: 2rem;
   }
-}
 
-/* Oculta el botón hamburguesa en escritorio */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #1a1a1a;
-}
-
-@media screen and (orientation: portrait) {
-  .menu-toggle {
-    display: block;
+  .quienes-somos-contenido {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
-  .menu-horizontal {
-    display: none;
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .Propuesta-Valor p {
+    font-size: 1.5rem;
+  }
+
+  .footer {
     flex-direction: column;
-    background-color: #c6f7ff;
-    position: fixed;
-    top: 5rem;
-    left: 0;
-    width: 100%;
+  }
+
+  .contenido_footer1 p,
+  .contenido_footer2 p {
+    font-size: 1.5rem;
+    font-family: "Quicksand", sans-serif;
+  }
+  .contenido_footer2 img {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+}
+
+/* Tablets y pantallas medianas */
+@media (min-width: 701px) and (max-width: 1024px) {
+  .footer {
+    flex-direction: column;
     padding: 1rem;
     gap: 1rem;
-    z-index: 99;
+    text-align: center;
+    height: auto;
   }
 
-  .menu-horizontal.show {
-    display: flex;
+  .contenido_footer1,
+  .contenido_footer2 {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .contenido_footer1 p,
+  .contenido_footer2 p {
+    font-size: 1rem;
   }
 }
