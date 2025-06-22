@@ -121,20 +121,31 @@ main {
   text-align: center;
   color: #5de0e6;
   margin: 40px 0;
+  font-size: 3rem;
 }
 
 .beneficio,
 .apoyo {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 40px 0;
+  gap: 5rem;
+  margin-bottom: 2rem;
 }
+
+.beneficio div,
+.apoyo div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
 
 .beneficio img,
 .apoyo img {
   width: 45%;
   height: auto;
+  flex-grow: 1;
 }
 
 .footer {

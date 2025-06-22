@@ -32,7 +32,7 @@ body {
   height: 5.063rem;
 }
 .Titulo {
-  font-family: Quicksand, sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 2rem;
   font-weight: bold;
   color: #1a1a1a;
@@ -74,7 +74,7 @@ body {
   padding: 6rem 2rem 3rem;
 }
 .FuncionalidadesPrincipales h2 {
-  font-family: Quicksand, sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 3rem;
   font-weight: bold;
   color: #5de0e6;
@@ -106,7 +106,7 @@ body {
   text-align: center;
 }
 .ReporteTexto h3 {
-  font-family: Quicksand, sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -139,7 +139,7 @@ body {
   text-align: center;
 }
 .ChatbotTexto h3 {
-  font-family: Quicksand, sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -176,7 +176,7 @@ body {
   text-align: center;
 }
 .ForosTexto h3 {
-  font-family: Quicksand, sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -209,7 +209,7 @@ body {
   text-align: center;
 }
 .RegistroTexto h3 {
-  font-family: Quicksand, sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -242,7 +242,7 @@ body {
   text-align: center;
 }
 .RecursosTexto h3 {
-  font-family: Quicksand, sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
