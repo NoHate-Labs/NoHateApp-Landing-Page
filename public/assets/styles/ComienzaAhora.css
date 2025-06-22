@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap");
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.contenido_principal {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.top-header {
+  position: fixed; /* Fija el menú en la parte superior */
+  background-color: #5de0e6; /* Fondo celeste brillante para visibilidad */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  z-index: 100; /* Se asegura de estar por encima de otros elementos */
+  height: 6.25rem; /* Altura fija del menú (100px) */
+  display: flex; /* Activa Flexbox para alinear los elementos internos */
+  align-items: center; /* Centrado vertical */
+  justify-content: space-between; /* Separación entre logo y menú */
+  padding: 0 1.5rem; /* Espacio horizontal interno del menú */
+  box-sizing: border-box;
+}
+
+.contenido_logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 5.063rem;
+  height: 5.063rem;
+}
+
+.titulo_logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-family: "Quicksand", sans-serif;
+}
+
+.menu_boton {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu_horizontal {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+}
+
+.menu_horizontal li {
+  padding: 0.5rem 1rem;
+  background-color: #c6f7ff;
+  border-radius: 20px;
+}
+
+.menu_horizontal li a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+}
+
+.comienza_ahora {
+  background-color: #b8f1fc;
+  padding-top: 6rem;
+  width: 100%;
+  text-align: center;
+}
+
+.comienza_ahora-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  width: 100%;
+}
+.comienza_ahora-img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.comienza_ahora-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.comienza_ahora h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-family: "Quicksand", sans-serif;
+}
+
+.comienza_ahora-texto1 p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-family: "Quicksand", sans-serif;
+}
+
+.aplicaciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20rem;
+  padding: 1rem;
+}
+
+.playstore_logo img,
+.appstore_logo img {
+  width: 10rem;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.playstore_texto p,
+.appstore-texto p {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1a1a1a;
+  font-family: "Quicksand", sans-serif;
+}
+
+.footer {
+  margin-top: auto;
+  background-color: #5de0e6;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.contenido_footer1 p,
+.contenido_footer2 p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-family: "Quicksand", sans-serif;
+}
+
+.contenido_footer2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contenido_footer2 img {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+/* Media Queries Responsivas */
+/* Moviles*/
+@media (max-width: 700px) {
+  .top-header {
+    padding: 0 1rem;
+  }
+
+  .menu_boton {
+    display: block;
+  }
+
+  .menu_horizontal {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    gap: 0;
+    padding: 0;
+  }
+
+  .menu_horizontal.active {
+    display: flex;
+  }
+  .menu_horizontal li {
+    width: 100%;
+    text-align: left;
+    border-radius: 0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .titulo_logo {
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .comienza_ahora h2 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+  .comienza_ahora-texto1 p {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .aplicaciones {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .playstore_logo img,
+  .appstore_logo img {
+    width: 70%;
+  }
+
+  .playstore_texto p,
+  .appstore-texto p {
+    font-size: 1.5rem;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .contenido_footer1 p,
+  .contenido_footer2 p {
+    font-size: 1.5rem;
+    font-family: "Quicksand", sans-serif;
+  }
+  .contenido_footer2 img {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+}
+
+/* Tablets y pantallas medianas */
+@media (min-width: 701px) and (max-width: 1024px) {
+  .comienza_ahora {
+    width: 100%;
+    padding-top: 6rem;
+  }
+
+  .comienza_ahora-contenido {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .comienza_ahora-img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .comienza_ahora-img img {
+    width: 100vw;
+    height: auto;
+    display: block;
+  }
+
+  .aplicaciones {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .playstore_logo img,
+  .appstore_logo img {
+    width: 8rem;
+  }
+
+  .playstore_texto p,
+  .appstore-texto p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    text-align: center;
+    height: auto;
+  }
+
+  .contenido_footer1,
+  .contenido_footer2 {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .contenido_footer1 p,
+  .contenido_footer2 p {
+    font-size: 1rem;
+  }
+}
