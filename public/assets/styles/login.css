@@ -47,9 +47,9 @@ body {
   gap: 1rem;
 }
 
-.logo {
-  width: 64px;
-  height: 64px;
+.logo img {
+  height: 5.063rem; /* Altura del logo */
+  width: 5.063rem; /* Mantiene proporción automática */
 }
 
 .header p {
@@ -226,9 +226,9 @@ input[type="password"] {
     top: 1rem;
     left: 1rem;
   }
-  .logo {
-    width: 48px;
-    height: 48px;
+  .logo img {
+    height: 5.063rem; /* Altura del logo */
+    width: 5.063rem; /* Mantiene proporción automática */
   }
   #left-side h1 {
     font-size: 2rem;
@@ -271,9 +271,9 @@ input[type="password"] {
     position: static;
     margin-bottom: 1rem;
   }
-  .logo {
-    width: 36px;
-    height: 36px;
+  .logo img {
+    height: 5.063rem; /* Altura del logo */
+    width: 5.063rem; /* Mantiene proporción automática */
   }
   #left-side h1 {
     font-size: 1.5rem;
@@ -326,10 +326,11 @@ input[type="password"] {
   }
   .header {
     gap: 0.5rem;
+    flex-direction: column;
   }
-  .logo {
-    width: 28px;
-    height: 28px;
+  .logo img {
+    height: 5.063rem; /* Altura del logo */
+    width: 5.063rem; /* Mantiene proporción automática */
   }
   #left-side h1 {
     font-size: 1.1rem;
