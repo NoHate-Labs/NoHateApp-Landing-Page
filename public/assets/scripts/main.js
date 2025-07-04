@@ -29,4 +29,14 @@ function iniciarSesion(event) {
 }
 
 // Asocia la función al botón del formulario
-document.getElementById("loginForm").addEventListener("submit", iniciarSesion);
+document.getElementById("loginForm")?.addEventListener("submit", iniciarSesion);
+
+
+//funcion para mostrar el año actual en el footer
+function mostrarAnioActual() {
+  const fecha = new Date();
+  const anioActual = fecha.getFullYear();
+  document.getElementById("anio").textContent = anioActual;
+}
+
+mostrarAnioActual();
