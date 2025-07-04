@@ -2,9 +2,9 @@
 name: Deploy static content to Pages
 
 on:
-  # Corre cuando se hace push a la rama develop
+  # Corre cuando se hace push a la rama main
   push:
-    branches: ["develop"]
+    branches: ["main"]
 
   # Permite ejecutar el workflow manualmente
   workflow_dispatch:
