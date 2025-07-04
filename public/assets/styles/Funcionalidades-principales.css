@@ -37,7 +37,7 @@ body {
   font-weight: bold;
   color: #1a1a1a;
 }
-.MenuBoton {
+.menu-toggle {
   display: none;
   font-size: 2rem;
   background: none;
@@ -45,7 +45,7 @@ body {
   cursor: pointer;
   margin-right: 0rem;
 }
-.MenuHorizontal {
+.menu-horizontal {
   font-family: Lato, sans-serif;
   font-weight: extra-bold;
   list-style: none;
@@ -55,19 +55,19 @@ body {
   gap: 1rem;
   padding: 0;
 }
-.MenuHorizontal li {
+.menu-horizontal li {
   padding: 0.5rem 1rem;
   background-color: #c6f7ff;
   border-radius: 20px;
 }
-.MenuHorizontal li a {
+.menu-horizontal li a {
   font-size: 14px;
   text-decoration: none;
   color: #1a1a1a;
   font-weight: bold;
   font-family: "Lato", sans-serif;
 }
-.MenuHorizontal li:hover {
+.menu-horizontal li:hover {
   opacity: 80%;
 }
 .FuncionalidadesPrincipales {
@@ -300,10 +300,10 @@ body {
     text-align: center;
     width: 100%;
   }
-  .MenuBoton {
+  .menu-toggle {
     display: block;
   }
-  .MenuHorizontal {
+  .menu-horizontal {
     display: none;
     flex-direction: column;
     width: 100%;
@@ -313,10 +313,10 @@ body {
     gap: 0rem;
     justify-content: none;
   }
-  .MenuHorizontal.active {
+  .menu-horizontal.active {
     display: flex;
   }
-  .MenuHorizontal li {
+  .menu-horizontal li {
     border-bottom: 1px solid #ccc;
     text-align: left;
     border-radius: 0px;
