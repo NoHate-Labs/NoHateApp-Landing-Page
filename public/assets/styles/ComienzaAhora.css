@@ -51,7 +51,7 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
-.menu_boton {
+.menu-toggle {
   display: none;
   font-size: 2rem;
   background: none;
@@ -59,7 +59,7 @@ body {
   cursor: pointer;
 }
 
-.menu_horizontal {
+.menu-horizontal {
   list-style: none;
   display: flex;
   gap: 1rem;
@@ -69,13 +69,13 @@ body {
   font-weight: 800;
 }
 
-.menu_horizontal li {
+.menu-horizontal li {
   padding: 0.5rem 1rem;
   background-color: #c6f7ff;
   border-radius: 20px;
 }
 
-.menu_horizontal li a {
+.menu-horizontal li a {
   font-size: 14px;
   text-decoration: none;
   color: #1a1a1a;
@@ -189,11 +189,11 @@ body {
     padding: 0 1rem;
   }
 
-  .menu_boton {
+  .menu-toggle {
     display: block;
   }
 
-  .menu_horizontal {
+  .menu-horizontal {
     display: none;
     flex-direction: column;
     width: 100%;
@@ -204,10 +204,10 @@ body {
     padding: 0;
   }
 
-  .menu_horizontal.active {
+  .menu-horizontal.active {
     display: flex;
   }
-  .menu_horizontal li {
+  .menu-horizontal li {
     width: 100%;
     text-align: left;
     border-radius: 0;

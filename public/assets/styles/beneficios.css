@@ -140,6 +140,15 @@ main {
   flex-grow: 1;
 }
 
+.beneficio h4,
+.apoyo h4 {
+  font-size: 1.75rem;
+}
+
+.beneficio p,
+.apoyo p {
+  font-size: 1.25rem;
+}
 
 .beneficio img,
 .apoyo img {
