@@ -99,6 +99,9 @@ body{
   gap:1rem;
   justify-content: space-between;
 }
+.input-icon-doble input{
+  width: 70%;
+}
 .input-icon-doble{
   display: flex;
   align-items: center;
@@ -203,12 +206,6 @@ input[type="date"] {
   z-index: 100;
 }
 /* MEDIA QUERIES RESPONSIVAS */
-/* TABLET */
-@media (min-width: 701px) and (max-width: 1024px){
-  .input-icon-doble input{
-    width: 50%;
-  }
-}
 /* MOBILE */
 @media (max-width: 700px) {
   body {
