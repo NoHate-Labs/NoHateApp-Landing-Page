@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NoHateApp - Registrar usuario</title>
+        <link rel="stylesheet" href="assets/styles/register.css" />
+        <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <section id="register-left-side">
+            <header class="header">
+                <a class="logo" href="index.html">
+                    <img src="assets/images/logo.png" alt="Logo NoHate Labs" />
+                </a>
+                <p>NoHate Labs</p>
+            </header>
+            <h1>REGISTRO DE USUARIO</h1>
+            <div class="registro-formulario">
+                <form class="registro-form" id="registroForm">
+                    <div class="input-group">
+                        <div class="input-icon">
+                            <img src="assets/images/user-icon.png" alt="Icono Nombre" class="input-icon-img" />
+                            <input type="text" id="nombre" name="nombre" required placeholder="Nombre" />
+                        </div>
+                    </div>
+                    <div class="input-group-doble">
+                        <div class="input-icon-doble">
+                            <img src="assets/images/user-icon.png" alt="Icono Apellido Paterno" class="input-icon-img" />
+                            <input type="text" id="apellidopat" name="apellidopat" required placeholder="Apellido Paterno" />
+                        </div>
+                        <div class="input-icon-doble">
+                            <img src="assets/images/user-icon.png" alt="Icono Apellido Materno" class="input-icon-img" />
+                            <input type="text" id="apellidomat" name="apellidomat" required placeholder="Apellido Materno" />
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-icon">
+                            <img src="assets/images/lock-icon.png" alt="Icono Correo Electrónico" class="input-icon-img" />
+                            <input type="email" id="email" name="email" required placeholder="Correo electrónico" />
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-icon">
+                            <img src="assets/images/lock-icon.png" alt="Icono Contraseña" class="input-icon-img" />
+                            <input type="password" id="pw" name="pw" required placeholder="Contraseña" />
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-icon">
+                            <img src="assets/images/calendar-icon.png" alt="Icono Fecha de Nacimiento" class="input-icon-img" />
+                            <input type="date" id="fechanacimiento" name="fechanacimiento" required />
+                            <label for="fechanacimiento">Fecha de Nacimiento</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="registro-btn">Registrarse</button>
+                    <button type="button" class="google-btn">
+                        <img src="assets/images/google-icon.png" alt="Icono de Google" class="google-icon" />
+                        Registrarse con Google
+                    </button>
+                </form>
+            </div>
+            <p class="tiene-cuenta">¿Ya tienes una cuenta? <a href="login.html">Inicia Sesión</a></p>
+        </section>
+        <section id="register-right-side">
+            <div class="contenedor-imagen">
+                <img class="register-imagen" src="assets/images/login-image.png" alt="Imagen de registro"/>
+            </div>
+        </section>
+        <script src="assets/scripts/main.js"></script>
+    </body>
+</html>
