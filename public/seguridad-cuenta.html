@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoHate Labs - Seguridad</title>
+    <link rel="stylesheet" href="assets/styles/seguridad-cuenta.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Lato&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ENCABEZADO -->
+    <nav class="top-header">
+      <div class="contenido-logo">
+        <a class="logo" href="index.html">
+          <img src="assets/images/logo.png" alt="Logo NoHate Labs" />
+        </a>
+        <h1 class="titulo-logo">NoHate Labs</h1>
+      </div>
+      <!-- BOTÓN HAMBURGUESA -->
+      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+      <!-- MENÚ DE NAVEGACIÓN -->
+      <ul class="menu-horizontal">
+        <li><a href="index.html">Inicio</a></li>
+        <li>
+          <a href="Funcionalidades-principales.html">Funciones Principales</a>
+        </li>
+        <li><a href="Beneficios.html">Beneficios</a></li>
+        <li><a href="ComienzaAhora.html">Comienza Ahora</a></li>
+        <li><a href="login.html">Inicia Sesión</a></li>
+      </ul>
+    </nav>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="contenedor-principal">
+      <!-- MENÚ LATERAL -->
+      <aside class="menu-lateral">
+        <button class="btn-lateral">Datos de Perfil</button>
+        <button class="btn-lateral activo">Seguridad de la Cuenta</button>
+        <button class="btn-lateral">Historial de Actividad</button>
+      </aside>
+
+      <!-- CONTENIDO DE SEGURIDAD -->
+      <main class="contenido">
+        <h1>SEGURIDAD DE LA CUENTA</h1>
+
+        <div class="seccion-seguridad">
+          <!-- CAMBIO DE CONTRASEÑA -->
+          <div class="columna">
+            <h3>Cambiar contraseña</h3>
+            <form id="form-cambiar-contraseña" class="formulario">
+              <input
+                type="password"
+                placeholder="Contraseña Actual"
+                name="pw-actual"
+              />
+              <input
+                type="password"
+                placeholder="Nueva contraseña"
+                name="pw-nuevo"
+              />
+              <input
+                type="password"
+                placeholder="Confirmar nueva contraseña"
+                name="pw-confirmar"
+              />
+              <button id="btn-cambiar-contraseña" class="btn-accion">
+                Cambiar contraseña
+              </button>
+            </form>
+          </div>
+
+          <!-- ACCIONES A LA DERECHA -->
+          <div class="columna">
+            <div>
+              <h3>Eliminación de cuenta</h3>
+              <button id="btn-eliminar" class="btn-accion">
+                Eliminar cuenta
+              </button>
+            </div>
+            <div>
+              <h3>Vincular cuenta de Google</h3>
+              <button id="btn-vincular" class="btn-accion">Vincular</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- POP-UP DE CONFIRMACIÓN -->
+    <div class="popup" id="popup-confirmacion">
+      <div class="popup-contenido">
+        <h2>CAMBIO DE CONTRASEÑA</h2>
+        <p><strong>Contraseña cambiada correctamente</strong></p>
+        <button class="boton-cerrar btn-accion">Aceptar</button>
+      </div>
+    </div>
+    <!-- POP-UP DE ELIMINACIÓN DE CUENTA -->
+    <div class="popup" id="popup-eliminar">
+      <div class="popup-contenido">
+        <h2>ELIMINAR CUENTA</h2>
+        <p>
+          <strong>Eliminar la cuenta implica:</strong><br />
+          1. Perder el acceso a la cuenta y a todas las actividades en la
+          aplicación<br />
+          2. No podrás recuperar la información almacenada en la cuenta<br />
+          3. Esta acción no se puede deshacer
+        </p>
+        <p>
+          Escribe la palabra <strong>CONFIRMAR</strong> y presiona el botón
+          Eliminar para eliminar la cuenta permanentemente
+        </p>
+        <input
+          type="text"
+          id="confirmarTexto"
+          placeholder="Escriba CONFIRMAR"
+        />
+
+        <!-- Botones -->
+        <div class="botones-popup">
+          <button id="confirmarEliminar" class="btn-accion">Eliminar</button>
+          <button id="cancelarEliminar" class="btn-accion">Cancelar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- POP-UP DE VINCULACIÓN -->
+    <div class="popup" id="popup-vincular">
+      <div class="popup-contenido">
+        <h2>VINCULACIÓN A CUENTA DE GOOGLE</h2>
+        <p>Cuenta de google vinculada correctamente</p>
+        <button class="boton-cerrar btn-accion">Aceptar</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="contenido_footer1">
+        <p>NoHate Labs - <span id="anio"></span></p>
+      </div>
+      <div class="contenido_footer2">
+        <p>Contáctanos en:</p>
+        <img src="assets/images/LogoInstagram.png" alt="Logo de Instagram" />
+        <img src="assets/images/LogoCorreo.png" alt="Logo del correo" />
+      </div>
+    </footer>
+
+    <!-- Enlace al JS externo -->
+    <script src="assets/scripts/seguridad.js"></script>
+    <script src="assets/scripts/main.js"></script>
+  </body>
+</html>
