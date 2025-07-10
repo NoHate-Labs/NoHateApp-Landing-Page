@@ -40,3 +40,21 @@ function mostrarAnioActual() {
 }
 
 mostrarAnioActual();
+
+//validar formulario recuperar contraseña
+const form = document.querySelector('form[name="form-recuperar"]');
+form.addEventListener("submit", (event) => {
+  const femail1 = form.elements["email-recuperar"].value;
+  if (!femail1) {
+    event.preventDefault();
+    alert("Por favor, ingrese su correo");
+  } else if (!validateEmail(femail1)) {
+    event.preventDefault();
+    alert("Por favor, ingrese un correo válido");
+  }
+});
+//validar email
+function validateEmail(femail1) {
+  const re = /^[a-zA-Z0-9._]+@[a-zA-Z]+\.[a-zA-Z]/;
+  return re.test(String(femail1).toLowerCase());
+}
