@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Historial de Actividad - NoHate Labs</title>
+    <link rel="stylesheet" href="styles-Historial-de-Actividad.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Lato&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+      <div class="logo">
+        <img src="assets/images/NOHATE-LABS-logo.jpg" alt="Logo NoHate Labs" />
+        <span>NoHate Labs</span>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        ☰
+      </button>
+      <nav class="nav-superior" id="navMenu">
+        <a href="#">Inicio</a>
+        <a href="#">Funciones Principales</a>
+        <a href="#">Beneficios</a>
+        <a href="#">Comienza Ahora</a>
+        <a href="#">Inicia Sesión</a>
+      </nav>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="contenedor-principal">
+      <!-- MENÚ LATERAL -->
+      <aside class="menu-lateral">
+        <button class="btn-lateral btn-1">Datos de Perfil</button>
+        <button class="btn-lateral btn-2">Seguridad de la Cuenta</button>
+        <button class="btn-lateral btn-3 activo">Historial de Actividad</button>
+      </aside>
+
+      <!-- CONTENIDO DEL HISTORIAL -->
+      <main class="contenido">
+        <h1>HISTORIAL DE ACTIVIDAD</h1>
+        <div class="historial-box">
+          <h6>Hoy</h6>
+          <p>Cambio de contraseña el 02/06/2025 a las 20:02 horas.</p>
+          <p>Inicio de sesión el 02/06/2025 a las 20:00 horas.</p>
+
+          <h6>Ayer</h6>
+          <p>Activación de notificaciones el 01/06/2025 a las 17:05 horas.</p>
+          <p>
+            Vinculación con cuenta de Google el 01/06/2025 a las 15:00 horas.
+          </p>
+
+          <h6>31/05/2025</h6>
+          <p>No se registraron acciones.</p>
+        </div>
+      </main>
+    </div>
+
+    <!-- JavaScript para el botón hamburguesa -->
+    <script>
+      const toggle = document.getElementById("menuToggle");
+      const nav = document.getElementById("navMenu");
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("mostrar");
+      });
+    </script>
+  </body>
+</html>
