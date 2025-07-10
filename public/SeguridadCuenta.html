@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page Seguridad</title>
+    <link rel="stylesheet" href="styles-seguridad-cuenta.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Lato&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+      <div class="logo">
+        <img src="imagenes/NoHateLabs-logo.png" alt="Logo NoHate Labs" />
+        <span>NoHate Labs</span>
+      </div>
+
+      <!-- BOTÓN HAMBURGUESA PARA MÓVIL -->
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menú"
+      >
+        ☰
+      </button>
+
+      <!-- MENÚ SUPERIOR -->
+      <nav class="nav-superior" id="navMenu">
+        <a href="#">Inicio</a>
+        <a href="#">Funciones Principales</a>
+        <a href="#">Beneficios</a>
+        <a href="#">Comienza Ahora</a>
+        <a href="#">Nombre de usuario</a>
+      </nav>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="contenedor-principal">
+      <!-- MENÚ LATERAL -->
+      <aside class="menu-lateral">
+        <button class="btn-lateral">Datos de Perfil</button>
+        <button class="btn-lateral activo">Seguridad de la Cuenta</button>
+        <button class="btn-lateral">Historial de Actividad</button>
+      </aside>
+
+      <!-- CONTENIDO DE SEGURIDAD -->
+      <main class="contenido">
+        <h1>SEGURIDAD DE LA CUENTA</h1>
+
+        <div class="seccion-seguridad">
+          <!-- CAMBIO DE CONTRASEÑA -->
+          <div class="columna">
+            <h3>Cambiar contraseña</h3>
+            <input type="password" placeholder="Contraseña Actual" />
+            <input type="password" placeholder="Nueva contraseña" />
+            <input type="password" placeholder="Confirmar nueva contraseña" />
+            <button class="btn-accion">Cambiar contraseña</button>
+          </div>
+
+          <!-- ACCIONES A LA DERECHA -->
+          <div class="columna">
+            <div>
+              <h3>Eliminación de cuenta</h3>
+              <button class="btn-accion">Eliminar cuenta</button>
+            </div>
+            <div>
+              <h3>Vincular cuenta de Google</h3>
+              <button class="btn-accion">Vincular</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- POP-UP DE CONFIRMACIÓN -->
+    <div class="popup" id="popup-confirmacion">
+      <div class="popup-contenido">
+        <h2>CAMBIO DE CONTRASEÑA</h2>
+        <p><strong>Contraseña cambiada correctamente</strong></p>
+        <button onclick="cerrarPopup()">Aceptar</button>
+      </div>
+    </div>
+    <!-- POP-UP DE ELIMINACIÓN DE CUENTA -->
+    <div class="popup" id="popup-eliminar">
+      <div class="popup-contenido">
+        <h2>ELIMINAR CUENTA</h2>
+        <p>
+          <strong>Eliminar la cuenta implica:</strong><br />
+          1. Perder el acceso a la cuenta y a todas las actividades en la
+          aplicación<br />
+          2. No podrás recuperar la información almacenada en la cuenta<br />
+          3. Esta acción no se puede deshacer
+        </p>
+        <p>
+          Escribe la palabra <strong>CONFIRMAR</strong> y presiona el botón
+          Eliminar para eliminar la cuenta permanentemente
+        </p>
+        <input
+          type="text"
+          id="confirmarTexto"
+          placeholder="Escriba CONFIRMAR"
+        />
+
+        <!-- Botones -->
+        <div class="botones-popup">
+          <button id="confirmarEliminar">Eliminar</button>
+          <button id="cancelarEliminar">Cancelar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- POP-UP DE VINCULACIÓN -->
+    <div class="popup" id="popup-vincular">
+      <div class="popup-contenido">
+        <h2>VINCULACIÓN A CUENTA DE GOOGLE</h2>
+        <p>Cuenta de google vinculada correctamente</p>
+        <button onclick="cerrarVinculacion()">Aceptar</button>
+      </div>
+    </div>
+
+    <!-- Enlace al JS externo -->
+    <script src="seguridad.js"></script>
+  </body>
+</html>

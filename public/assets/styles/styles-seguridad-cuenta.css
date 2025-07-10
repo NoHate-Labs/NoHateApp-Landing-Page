@@ -1,0 +1,328 @@
+/* === RESET BÁSICO === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === FUENTE Y FONDO === */
+body {
+  background-color: #f1f1f1;
+  font-family: "Lato", sans-serif;
+  padding-top: 80px;
+}
+
+/* === ENCABEZADO === */
+.encabezado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #5de0e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 70px;
+}
+
+.logo span {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* === MENÚ SUPERIOR === */
+.nav-superior a {
+  margin-left: 10px;
+  background-color: #c6f7ff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #1a1a1a;
+  font-size: 0.85rem;
+  transition: background-color 0.3s;
+}
+
+.nav-superior a:hover {
+  background-color: #b3f0ff;
+}
+
+/* === BOTÓN HAMBURGUESA === */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #000;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.contenedor-principal {
+  display: flex;
+  padding: 100px 30px 30px 0;
+  gap: 20px;
+}
+
+.menu-lateral {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 40px 0 0 0;
+}
+
+.btn-lateral {
+  width: 250px;
+  padding: 35px;
+  background-color: #5de0e6;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 0;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  text-align: left;
+}
+.btn-lateral:hover {
+  background-color: #b3f0ff;
+  color: #000;
+}
+
+.btn-lateral.activo {
+  background-color: #c6f7ff;
+}
+
+/* === CONTENIDO === */
+.contenido {
+  background-color: #5cebec;
+  padding: 30px;
+  border-radius: 14px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 450px;
+}
+
+.contenido h1,
+.contenido h2 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #000;
+  text-align: center;
+}
+
+/* === SECCIÓN DE SEGURIDAD === */
+.seccion-seguridad {
+  display: flex;
+  gap: 60px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.columna {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.columna h3,
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 25px;
+}
+
+/* === INPUTS === */
+input[type="password"],
+input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #c6f7ff;
+  font-family: "Lato", sans-serif;
+  width: 100%;
+}
+
+/* === BOTONES === */
+.btn-accion,
+button {
+  padding: 10px;
+  background-color: #c6f7ff;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  transition: background 0.3s;
+  font-family: "Lato", sans-serif;
+}
+
+.btn-accion:hover,
+button:hover {
+  background-color: #5de0e6;
+}
+
+.btn-accion {
+  width: 140px;
+  padding: 10px 0;
+  text-align: center;
+  align-self: center;
+}
+
+/* === POPUPS === */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.botones-popup {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.botones-popup button {
+  flex: 1;
+}
+
+.popup-contenido {
+  background-color: #b6ffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 10px #00000033;
+  width: 100%;
+  max-width: 400px;
+}
+
+.popup-contenido h2 {
+  font-family: "Quicksand", sans-serif;
+  margin-bottom: 20px;
+}
+
+.popup-contenido p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.popup-contenido input[type="text"] {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 0.95rem;
+}
+
+.popup-contenido button {
+  background-color: #5de0e6;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 40px;
+  cursor: pointer;
+  color: #000;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.popup-contenido button:hover {
+  background-color: #42e4ff;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .nav-superior {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #42e4ff;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-superior.mostrar {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .contenedor-principal {
+    flex-direction: column;
+    padding: 100px 20px 30px 20px;
+    align-items: center;
+  }
+
+  .menu-lateral {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin: 0 0 20px 0;
+  }
+
+  .btn-lateral {
+    width: auto;
+    padding: 12px 18px;
+    font-size: 0.85rem;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .seccion-seguridad {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .columna {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .popup-contenido {
+    max-width: 90%;
+    padding: 25px;
+  }
+
+  .popup-contenido button {
+    width: 100%;
+    padding: 15px;
+  }
+}

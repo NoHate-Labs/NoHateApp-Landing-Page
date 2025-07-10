@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (nueva && confirmar && nueva === confirmar) {
       popupCambio.style.display = "flex";
-      limpiarFormularioPassword(); // ✅ limpia campos
+      limpiarFormularioPassword(); 
     } else {
       alert("Las contraseñas no coinciden o están vacías.");
     }
