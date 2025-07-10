@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="assets/styles/CambiarContraseña.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="left-side">
+      <header class="header">
+        <a class="logo" href="index.html">
+          <img src="assets/images/LogoNoHateLabs.png" alt="Logo NoHate Labs" />
+        </a>
+        <p>NoHate Labs</p>
+      </header>
+      <div class="contenido-cambiar">
+        <h1 class="titulo-cambiar">Cambiar contraseña</h1>
+        <h2 class="subtitulo-cambiar">Ingrese su nueva contraseña</h2>
+        <form class="form-cambiar" id="form-cambiar" name="form-cambiar">
+          <div class="campos-datos">
+            <div class="icono-campo">
+              <img
+                src="assets/images/lock-icon.png"
+                alt="Contraseña icono"
+                class="contraseña-icono"
+              />
+              <input
+                type="password"
+                id="password1"
+                name="password1"
+                placeholder="Nueva contraseña"
+              />
+            </div>
+            <div class="icono-campo">
+              <img
+                src="assets/images/lock-icon.png"
+                alt="Contraseña icono"
+                class="contraseña-icono"
+              />
+              <input
+                type="password"
+                id="password2"
+                name="password2"
+                placeholder="Confirmar nueva contraseña"
+              />
+            </div>
+          </div>
+          <button type="submit" class="recuperar-boton">
+            Cambiar contraseña
+          </button>
+        </form>
+
+        <div id="popup-cambiar" class="popup-cambiar">
+          <div class="popup-contenido">
+            <h3>Contraseña actualizada</h3>
+            <a href="login.html" class="popup-boton">Iniciar sesión</a>
+          </div>
+        </div>  
+    </section>
+    <section id="right-side">
+      <div class="right-side-contenido">
+        <img
+          src="assets/images/ImagenAdolescente.png"
+          alt="Imagen adolescente"
+          class="cambiar-imagen"
+        />
+      </div>
+    </section>
+    <script src="assets/scripts/main.js"></script>
+  </body>
+</html>
