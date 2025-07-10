@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page Seguridad</title>
+    <title>NoHate Labs - Seguridad</title>
     <link rel="stylesheet" href="assets/styles/seguridad-cuenta.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,20 +14,26 @@
   </head>
   <body>
     <!-- ENCABEZADO -->
-    <header>
-      <div class="logo">
-        <img src="assets/images/LogoNoHateLabs.png" width="70%" />
-        <h2>NoHate Labs</h2>
+    <nav class="top-header">
+      <div class="contenido-logo">
+        <a class="logo" href="index.html">
+          <img src="assets/images/logo.png" alt="Logo NoHate Labs" />
+        </a>
+        <h1 class="titulo-logo">NoHate Labs</h1>
       </div>
-      <button class="hamburger">&#9776;</button>
-      <nav class="menu">
-        <a href="#">Inicio</a>
-        <a href="#">Funciones Principales</a>
-        <a href="#">Beneficios</a>
-        <a href="#">Comienza Ahora</a>
-        <a href="#">Nombre de usuario</a>
-      </nav>
-    </header>
+      <!-- BOTÓN HAMBURGUESA -->
+      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+      <!-- MENÚ DE NAVEGACIÓN -->
+      <ul class="menu-horizontal">
+        <li><a href="index.html">Inicio</a></li>
+        <li>
+          <a href="Funcionalidades-principales.html">Funciones Principales</a>
+        </li>
+        <li><a href="Beneficios.html">Beneficios</a></li>
+        <li><a href="ComienzaAhora.html">Comienza Ahora</a></li>
+        <li><a href="login.html">Inicia Sesión</a></li>
+      </ul>
+    </nav>
 
     <!-- CONTENEDOR PRINCIPAL -->
     <div class="contenedor-principal">
@@ -46,21 +52,39 @@
           <!-- CAMBIO DE CONTRASEÑA -->
           <div class="columna">
             <h3>Cambiar contraseña</h3>
-            <input type="password" placeholder="Contraseña Actual" />
-            <input type="password" placeholder="Nueva contraseña" />
-            <input type="password" placeholder="Confirmar nueva contraseña" />
-            <button class="btn-accion">Cambiar contraseña</button>
+            <form id="form-cambiar-contraseña" class="formulario">
+              <input
+                type="password"
+                placeholder="Contraseña Actual"
+                name="pw-actual"
+              />
+              <input
+                type="password"
+                placeholder="Nueva contraseña"
+                name="pw-nuevo"
+              />
+              <input
+                type="password"
+                placeholder="Confirmar nueva contraseña"
+                name="pw-confirmar"
+              />
+              <button id="btn-cambiar-contraseña" class="btn-accion">
+                Cambiar contraseña
+              </button>
+            </form>
           </div>
 
           <!-- ACCIONES A LA DERECHA -->
           <div class="columna">
             <div>
               <h3>Eliminación de cuenta</h3>
-              <button class="btn-accion">Eliminar cuenta</button>
+              <button id="btn-eliminar" class="btn-accion">
+                Eliminar cuenta
+              </button>
             </div>
             <div>
               <h3>Vincular cuenta de Google</h3>
-              <button class="btn-accion">Vincular</button>
+              <button id="btn-vincular" class="btn-accion">Vincular</button>
             </div>
           </div>
         </div>
@@ -72,7 +96,7 @@
       <div class="popup-contenido">
         <h2>CAMBIO DE CONTRASEÑA</h2>
         <p><strong>Contraseña cambiada correctamente</strong></p>
-        <button onclick="cerrarPopup()">Aceptar</button>
+        <button class="boton-cerrar btn-accion">Aceptar</button>
       </div>
     </div>
     <!-- POP-UP DE ELIMINACIÓN DE CUENTA -->
@@ -98,8 +122,8 @@
 
         <!-- Botones -->
         <div class="botones-popup">
-          <button id="confirmarEliminar">Eliminar</button>
-          <button id="cancelarEliminar">Cancelar</button>
+          <button id="confirmarEliminar" class="btn-accion">Eliminar</button>
+          <button id="cancelarEliminar" class="btn-accion">Cancelar</button>
         </div>
       </div>
     </div>
@@ -109,11 +133,23 @@
       <div class="popup-contenido">
         <h2>VINCULACIÓN A CUENTA DE GOOGLE</h2>
         <p>Cuenta de google vinculada correctamente</p>
-        <button onclick="cerrarVinculacion()">Aceptar</button>
+        <button class="boton-cerrar btn-accion">Aceptar</button>
       </div>
     </div>
 
+    <footer class="footer">
+      <div class="contenido_footer1">
+        <p>NoHate Labs - <span id="anio"></span></p>
+      </div>
+      <div class="contenido_footer2">
+        <p>Contáctanos en:</p>
+        <img src="assets/images/LogoInstagram.png" alt="Logo de Instagram" />
+        <img src="assets/images/LogoCorreo.png" alt="Logo del correo" />
+      </div>
+    </footer>
+
     <!-- Enlace al JS externo -->
     <script src="assets/scripts/seguridad.js"></script>
+    <script src="assets/scripts/main.js"></script>
   </body>
 </html>

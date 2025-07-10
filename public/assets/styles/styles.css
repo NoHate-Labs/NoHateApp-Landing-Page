@@ -53,7 +53,6 @@ body {
   list-style: none;
   display: flex;
   gap: 1rem;
-  margin: 0;
   padding: 0;
   font-family: "Lato", sans-serif;
   margin-left: auto;
@@ -271,7 +270,7 @@ body {
 
 /* Media Queries Responsivas */
 /* Moviles*/
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .top-header {
     padding: 0 1rem;
   }

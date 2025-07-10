@@ -1,101 +1,100 @@
-/* === RESET BÁSICO === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /* === FUENTE Y FONDO === */
 body {
-  background-color: #f1f1f1;
+  margin: 0; /* Elimina el margen exterior del navegador */
+  padding: 0rem; /* Espaciado interno general */
+  box-sizing: border-box; /* Incluye padding y border en los tamaños */
+  background-color: #f2f2f2; /* Color de fondo suave */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: "Lato", sans-serif;
-  padding-top: 80px;
 }
 
 /* === ENCABEZADO GENERAL === */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: #5de0e6;
+.top-header {
+  position: fixed; /* Fija el menú en la parte superior */
+  background-color: #5de0e6; /* Fondo celeste brillante para visibilidad */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  z-index: 100; /* Se asegura de estar por encima de otros elementos */
+  height: 6.25rem; /* Altura fija del menú (100px) */
+  display: flex; /* Activa Flexbox para alinear los elementos internos */
+  align-items: center; /* Centrado vertical */
+  justify-content: space-between; /* Separación entre logo y menú */
+  padding: 0 1.5rem; /* Espacio horizontal interno del menú */
+  box-sizing: border-box;
+}
+
+.titulo-logo {
+  color: #1a1a1a;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.contenido-logo {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  gap: 1rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  text-decoration: none;
 }
 
 .logo img {
-  height: 70px;
+  height: 5.063rem; /* Altura del logo */
+  width: 5.063rem; /* Mantiene proporción automática */
 }
 
-.logo h2 {
-  font-family: "Quicksand", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-/* === MENÚ SUPERIOR === */
-.menu {
+.menu-horizontal {
+  list-style: none;
   display: flex;
-  gap: 10px;
+  gap: 1rem;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  margin-left: auto;
 }
 
-.menu a {
-  margin-left: 10px;
+.menu-horizontal li {
+  padding: 0.5rem 1rem;
   background-color: #c6f7ff;
-  padding: 8px 14px;
   border-radius: 20px;
+}
+
+.menu-horizontal li a {
+  font-size: 14px;
   text-decoration: none;
-  font-weight: bold;
   color: #1a1a1a;
-  font-size: 0.85rem;
-  transition: background-color 0.3s;
-}
-
-.menu a:hover {
-  background-color: #b3f0ff;
-}
-
-/* === BOTÓN HAMBURGUESA === */
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: #000;
-  cursor: pointer;
-  z-index: 1100;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
 }
 
 /* === CONTENEDOR PRINCIPAL === */
 .contenedor-principal {
+  flex: 2;
   display: flex;
-  padding: 100px 30px 30px 0;
+  padding: 6rem 30px 30px 0;
   gap: 20px;
+  align-items: center;
 }
 
 .menu-lateral {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 40px 0 0 0;
+  margin: 20px 0;
 }
 
 .btn-lateral {
   width: 250px;
-  padding: 35px;
+  padding: 24px;
   background-color: #5de0e6;
   color: black;
   font-weight: bold;
+  font-size: 1.25rem;
   border: none;
   border-radius: 0;
   font-family: "Lato", sans-serif;
@@ -113,8 +112,8 @@ header {
 
 /* === CONTENIDO === */
 .contenido {
-  background-color: #5cebec;
-  padding: 30px;
+  background-color: #5DE0E680;
+  padding: 30px 30px 6rem 30px;
   border-radius: 14px;
   flex-grow: 1;
   display: flex;
@@ -134,6 +133,9 @@ header {
   color: #000;
   text-align: center;
 }
+.contenido h1 {
+  font-size: 3rem;
+}
 
 /* === SECCIÓN DE SEGURIDAD === */
 .seccion-seguridad {
@@ -148,14 +150,22 @@ header {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  box-sizing: border-box;
 }
 
 .columna h3,
 label {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: bold;
   color: #000;
-  margin-bottom: 25px;
+  margin-bottom: 1rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
 }
 
 /* === INPUTS === */
@@ -163,17 +173,18 @@ input[type="password"],
 input[type="text"] {
   padding: 10px;
   border: none;
-  border-radius: 6px;
+  border-radius: 20px;
   background-color: #c6f7ff;
   font-family: "Lato", sans-serif;
   width: 100%;
+  box-sizing: border-box;
+  height: 60px;
 }
 
 /* === BOTONES === */
-.btn-accion,
-button {
+.btn-accion {
   padding: 10px;
-  background-color: #c6f7ff;
+  background-color: #5de0e6;
   border: none;
   border-radius: 20px;
   font-weight: bold;
@@ -181,6 +192,7 @@ button {
   color: #000;
   transition: background 0.3s;
   font-family: "Lato", sans-serif;
+  font-size: 1.25rem;
 }
 
 .btn-accion:hover,
@@ -189,8 +201,8 @@ button:hover {
 }
 
 .btn-accion {
-  width: 140px;
-  padding: 10px 0;
+  width: fit-content;
+  padding: 10px 1rem;
   text-align: center;
   align-self: center;
 }
@@ -237,14 +249,6 @@ button:hover {
 }
 
 .popup-contenido button {
-  background-color: #5de0e6;
-  border: none;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 1rem;
-  padding: 10px 40px;
-  cursor: pointer;
-  color: #000;
   transition: background-color 0.3s;
   margin-top: 10px;
   display: inline-block;
@@ -265,32 +269,93 @@ button:hover {
   flex: 1;
 }
 
+/* Oculta el botón hamburguesa en escritorio */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1a1a1a;
+}
+
+.footer {
+  margin-top: auto;
+  background-color: #5de0e6;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.contenido_footer1 p,
+.contenido_footer2 p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-family: "Quicksand", sans-serif;
+}
+
+.contenido_footer2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contenido_footer2 img {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #42e4ff;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  .top-header {
+    padding: 0 1rem;
   }
 
-  .menu.mostrar {
-    display: flex;
+  .titulo-logo {
+    font-size: 1.2rem;
+    padding-right: 0;
+    text-align: center;
+    width: 100%;
   }
-
-  .hamburger {
+  .menu-toggle {
     display: block;
   }
 
+  .menu-horizontal {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    gap: 0rem;
+    padding: 0;
+  }
+  .menu-horizontal.active {
+    display: flex;
+  }
+  .menu-horizontal li {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    border-radius: 0px;
+  }
+
+  .contenido h1 {
+    font-size: 2rem;
+  }
+
+
   .contenedor-principal {
     flex-direction: column;
-    padding: 100px 20px 30px 20px;
+    padding: 6rem 20px 30px 20px;
     align-items: center;
   }
 
@@ -300,7 +365,7 @@ button:hover {
     align-items: center;
     width: 100%;
     gap: 10px;
-    margin: 0 0 20px 0;
+    padding: 20px 0;
   }
 
   .btn-lateral {
@@ -331,5 +396,33 @@ button:hover {
   .popup-contenido button {
     width: 100%;
     padding: 15px;
+  }
+}
+
+/* Tablets y pantallas medianas */
+@media (min-width: 701px) and (max-width: 1024px) {
+
+  .contenido h1 {
+    font-size: 2rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    text-align: center;
+    height: auto;
+  }
+
+  .contenido_footer1,
+  .contenido_footer2 {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .contenido_footer1 p,
+  .contenido_footer2 p {
+    font-size: 1rem;
   }
 }
