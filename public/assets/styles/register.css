@@ -108,6 +108,7 @@ body{
   background: #c4f8fc;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  flex: 1;
 }
 .input-icon-doble-img {
   width: 20px;
