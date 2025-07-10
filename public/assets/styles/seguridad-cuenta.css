@@ -76,7 +76,7 @@ body {
 .contenedor-principal {
   flex: 2;
   display: flex;
-  padding: 6rem 30px 30px 0;
+  padding: 8rem 30px 30px 0;
   gap: 20px;
   align-items: center;
 }
