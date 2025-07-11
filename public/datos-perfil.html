@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoHate Labs - Datos Perfil</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/styles/datos-perfil.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Lato&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ENCABEZADO -->
+    <nav class="top-header">
+      <div class="contenido-logo">
+        <a class="logo" href="index.html">
+          <img src="assets/images/logo.png" alt="Logo NoHate Labs" />
+        </a>
+        <h1 class="titulo-logo">NoHate Labs</h1>
+      </div>
+      <!-- BOTÓN HAMBURGUESA -->
+      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+      <!-- MENÚ DE NAVEGACIÓN -->
+      <ul class="menu-horizontal">
+        <li><a href="index.html">Inicio</a></li>
+        <li>
+          <a href="Funcionalidades-principales.html">Funciones Principales</a>
+        </li>
+        <li><a href="Beneficios.html">Beneficios</a></li>
+        <li><a href="ComienzaAhora.html">Comienza Ahora</a></li>
+        <li><a href="login.html">Inicia Sesión</a></li>
+      </ul>
+    </nav>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="contenedor-principal">
+      <!-- MENÚ LATERAL -->
+      <aside class="menu-lateral">
+        <a href="#" class="btn-lateral activo">Datos de Perfil</a>
+        <a href="seguridad-cuenta.html" class="btn-lateral"
+          >Seguridad de la Cuenta</a
+        >
+        <a href="Historial-de-Actividad.html" class="btn-lateral"
+          >Historial de Actividad</a
+        >
+      </aside>
+
+      <!-- CONTENIDO DE SEGURIDAD -->
+      <main class="contenido">
+        <h1>DATOS DE PERFIL</h1>
+
+        <form class="form-datos-perfil" class="formulario">
+          <!-- DATOS DE PERFIL -->
+          <div class="columna">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
+
+            <label for="correo">Correo electrónico</label>
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              placeholder="Correo electrónico"
+            />
+
+            <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" />
+          </div>
+
+          <!-- ACCIONES A LA DERECHA -->
+          <div class="columna">
+            <label for="apellido-paterno">Apellido Paterno</label>
+            <input
+              type="text"
+              id="apellido-paterno"
+              name="apellido-paterno"
+              placeholder="Apellido Paterno"
+            />
+
+            <label for="apellido-materno">Apellido Materno</label>
+            <input
+              type="text"
+              id="apellido-materno"
+              name="apellido-materno"
+              placeholder="Apellido Materno"
+            />
+          </div>
+        </form>
+
+        <div class="datos-perfil" class="formulario">
+          <!-- DATOS DE PERFIL -->
+          <div class="columna">
+            <h3 for="nombre">Nombre</h3>
+            <p id="texto-nombre">Nombre</p>
+
+            <h3 for="correo">Correo electrónico</h3>
+            <p id="texto-correo">Correo electrónico</p>
+
+            <h3 for="fecha-nacimiento">Fecha de Nacimiento</h3>
+            <p id="texto-fecha-nacimiento">Fecha de Nacimiento</p>
+          </div>
+
+          <!-- ACCIONES A LA DERECHA -->
+          <div class="columna">
+            <h3 for="apellido-paterno">Apellido Paterno</h3>
+            <p id="texto-apellido-paterno">Apellido Paterno</p>
+
+            <h3 for="apellido-materno">Apellido Materno</h3>
+            <p id="texto-apellido-materno">Apellido Materno</p>
+ 
+            <h3>Cuenta de Google</h3>
+            <p id="texto-estado-google">Vinculado a correo de cuenta de google</p>
+          </div>
+        </div>
+
+        <button id="btn-modificar-datos" class="btn-accion">
+          Modificar datos
+        </button>
+
+        <button id="btn-confirmar" class="btn-accion">
+          Confirmar
+        </button>
+      </main>
+    </div>
+
+    <!-- POP-UP DE CONFIRMACIÓN -->
+    <div class="popup" id="popup-confirmacion">
+      <div class="popup-contenido">
+        <h2>PERFIL DE USUARIO</h2>
+        <p><strong>Datos modificados correctamente</strong></p>
+        <button class="boton-cerrar btn-accion">Aceptar</button>
+      </div>
+    </div>
+
+
+    <footer class="footer">
+      <div class="contenido_footer1">
+        <p>NoHate Labs - <span id="anio"></span></p>
+      </div>
+      <div class="contenido_footer2">
+        <p>Contáctanos en:</p>
+        <img src="assets/images/LogoInstagram.png" alt="Logo de Instagram" />
+        <img src="assets/images/LogoCorreo.png" alt="Logo del correo" />
+      </div>
+    </footer>
+
+    <!-- Enlace al JS externo -->
+    <script src="assets/scripts/datos-perfil.js"></script>
+    <script src="assets/scripts/main.js"></script>
+  </body>
+</html>
