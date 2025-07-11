@@ -1,3 +1,21 @@
+function obtenerUsuarios() {
+  const usuarios = localStorage.getItem("usuariosRegistrados");
+  return usuarios ? JSON.parse(usuarios) : [];
+}
+
+function guardarUsuarios(usuarios) {
+  localStorage.setItem("usuariosRegistrados", JSON.stringify(usuarios));
+}
+
+function obtenerUsuarioLogueado() {
+  const usuario = localStorage.getItem("usuarioLogueado");
+  return usuario ? JSON.parse(usuario) : null;
+}
+
+function guardarUsuarioLogueado(usuario) {
+  localStorage.setItem("usuarioLogueado", JSON.stringify(usuario));
+}
+
 function limpiarFormulario() {
   const inputs = document.querySelectorAll("input");
   inputs.forEach((input) => (input.value = ""));
@@ -55,9 +73,57 @@ btnConfirmar.addEventListener("click", function () {
     btnConfirmar.style.display = "none";
     datosPerfil.style.display = "flex";
     btnModificarDatos.style.display = "block";
-    limpiarFormulario();
+    // Actualizar usuario logueado y lista de usuarios
+    const usuarioLogueado = obtenerUsuarioLogueado();
+    if (usuarioLogueado) {
+      usuarioLogueado.nombre = nombre;
+      usuarioLogueado.email = correo;
+      usuarioLogueado.fechaNacimiento = fechaNacimiento;
+      usuarioLogueado.apellidop = apellidoPaterno;
+      usuarioLogueado.apellidom = apellidoMaterno;
+      guardarUsuarioLogueado(usuarioLogueado);
+
+      const usuarios = obtenerUsuarios();
+      const idx = usuarios.findIndex((u) => u.email === usuarioLogueado.email);
+      if (idx !== -1) {
+      usuarios[idx] = usuarioLogueado;
+      guardarUsuarios(usuarios);
+      }
+    }
+    mostrarDatosUsuario();
   }
 });
+
+function mostrarDatosUsuario() {
+  const usuario = obtenerUsuarioLogueado();
+  if (usuario) {
+    document.getElementById("nombre").value = usuario.nombre || "";
+    document.getElementById("apellido-paterno").value = usuario.apellidop || "";
+    document.getElementById("apellido-materno").value = usuario.apellidom || "";
+    document.getElementById("correo").value = usuario.email || "";
+    document.getElementById("fecha-nacimiento").value =
+      usuario.fechaNacimiento || "";
+
+    document.getElementById("texto-nombre").textContent = usuario.nombre || "";
+    document.getElementById("texto-correo").textContent = usuario.email || "";
+    document.getElementById("texto-fecha-nacimiento").textContent =
+      usuario.fechaNacimiento
+        ? (() => {
+            const d = new Date(usuario.fechaNacimiento);
+            const day = String(d.getDate()).padStart(2, "0");
+            const month = String(d.getMonth() + 1).padStart(2, "0");
+            const year = d.getFullYear();
+            return `${day}/${month}/${year}`;
+          })()
+        : "";
+    document.getElementById("texto-apellido-paterno").textContent =
+      usuario.apellidop || "";
+    document.getElementById("texto-apellido-materno").textContent =
+      usuario.apellidom || "";
+  }
+}
+
+mostrarDatosUsuario();
 
 // Cerrar popup
 document.querySelector(".boton-cerrar").addEventListener("click", function () {

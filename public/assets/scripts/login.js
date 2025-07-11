@@ -36,5 +36,27 @@ function iniciarSesion(event) {
   }
 }
 
+// Función para iniciar sesión con Google (usando el primer usuario registrado)
+function iniciarSesionConGoogle() {
+  const usuarios = obtenerUsuarios();
+  
+  if (usuarios.length === 0) {
+    alert("No hay usuarios registrados. Por favor, regístrese primero.");
+    window.location.href = "register.html";
+    return;
+  }
+
+  // Tomar el primer usuario de la lista
+  const primerUsuario = usuarios[0];
+  
+  // Guardar usuario logueado
+  guardarUsuarioLogueado(primerUsuario);
+  alert(`¡Inicio de sesión con Google exitoso! Bienvenido ${primerUsuario.nombre}`);
+  window.location.href = "index.html";
+}
+
 // Asociar eventos
 document.getElementById("loginForm")?.addEventListener("submit", iniciarSesion);
+document
+  .querySelector(".google-btn")
+  ?.addEventListener("click", iniciarSesionConGoogle);
