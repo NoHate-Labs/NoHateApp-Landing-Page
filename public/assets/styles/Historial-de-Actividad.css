@@ -1,0 +1,331 @@
+body {
+  margin: 0; /* Elimina el margen exterior del navegador */
+  padding: 0rem; /* Espaciado interno general */
+  box-sizing: border-box; /* Incluye padding y border en los tamaños */
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+}
+
+/* === ENCABEZADO === */
+.top-header {
+  position: fixed; /* Fija el menú en la parte superior */
+  background-color: #5de0e6; /* Fondo celeste brillante para visibilidad */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  z-index: 100; /* Se asegura de estar por encima de otros elementos */
+  height: 6.25rem; /* Altura fija del menú (8rem) */
+  display: flex; /* Activa Flexbox para alinear los elementos internos */
+  align-items: center; /* Centrado vertical */
+  justify-content: space-between; /* Separación entre logo y menú */
+  padding: 0 1.5rem; /* Espacio horizontal interno del menú */
+  box-sizing: border-box;
+}
+
+.titulo-logo {
+  color: #1a1a1a;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.contenido-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 5.063rem; /* Altura del logo */
+  width: 5.063rem; /* Mantiene proporción automática */
+}
+
+.menu-horizontal {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  margin-left: auto;
+}
+
+.menu-horizontal li {
+  padding: 0.5rem 1rem;
+  background-color: #c6f7ff;
+  border-radius: 20px;
+}
+
+.menu-horizontal li a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+}
+/* === CONTENEDOR PRINCIPAL === */
+.contenedor-principal {
+  display: flex;
+  padding: 8rem 30px 30px 0;
+  gap: 20px;
+  flex: 2; /* Ocupa el espacio restante del contenedor */
+  align-items: center;
+}
+
+/* === MENÚ LATERAL === */
+.menu-lateral {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 40px 0 0 0;
+}
+
+.btn-lateral {
+  width: 250px;
+  padding: 24px;
+  color: black;
+  font-weight: bold;
+  border: none;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s;
+  font-size: 1.25rem; /* Tamaño de fuente más grande */
+}
+
+/* === BOTONES LATERALES INDIVIDUALES CON COLOR PERSONALIZADO === */
+.btn-lateral.btn-1 {
+  background-color: #c6f7ff;
+}
+.btn-lateral.btn-2 {
+  background-color: #c6f7ff;
+}
+.btn-lateral.btn-3 {
+  background-color: #b6ebed;
+}
+
+/* === HOVER PARA CADA BOTÓN === */
+.btn-lateral.btn-1:hover {
+  background-color: #b3f0ff;
+}
+.btn-lateral.btn-2:hover {
+  background-color: #adeffa;
+}
+.btn-lateral.btn-3:hover {
+  background-color: #a1dddf;
+}
+
+/* === ACTIVO SOLO MANTIENE EL COLOR ORIGINAL === */
+.btn-lateral.activo.btn-1 {
+  background-color: #c6f7ff;
+}
+.btn-lateral.activo.btn-2 {
+  background-color: #c6f7ff;
+}
+.btn-lateral.activo.btn-3 {
+  background-color: #5de0e6;
+}
+
+/* === CONTENIDO === */
+.contenido {
+  background-color: #5cebec;
+  padding: 30px;
+  border-radius: 14px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 450px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+
+.contenido h1 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #000;
+  text-align: center;
+}
+
+.historial-box {
+  width: 100%;
+  padding: 20px 30px;
+  border-radius: 12px;
+  max-width: 800px;
+  text-align: left;
+}
+
+.historial-box h6 {
+  font-size: 1rem;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.historial-box p {
+  margin-top: 10px;
+  font-size: 1rem;
+  background-color: #c0f4fb;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+/* Oculta el botón hamburguesa en escritorio */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1a1a1a;
+}
+
+.footer {
+  margin-top: auto;
+  background-color: #5de0e6;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.contenido_footer1 p,
+.contenido_footer2 p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-family: "Quicksand", sans-serif;
+}
+
+.contenido_footer2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contenido_footer2 img {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .top-header {
+    padding: 0 1rem;
+  }
+
+  .titulo-logo {
+    font-size: 1.2rem;
+    padding-right: 0;
+    text-align: center;
+    width: 100%;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .menu-horizontal {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    gap: 0rem;
+    padding: 0;
+  }
+  .menu-horizontal.active {
+    display: flex;
+  }
+  .menu-horizontal li {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    border-radius: 0px;
+  }
+
+  .contenedor-principal {
+    flex-direction: column;
+    padding: 8rem 20px 30px 20px;
+    align-items: center;
+  }
+
+  .menu-lateral {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin: 0 0 20px 0;
+  }
+
+  .btn-lateral {
+    width: auto;
+    padding: 12px 18px;
+    font-size: 1.25rem;
+    text-align: center;
+    border-radius: 12px; /* borde solo en responsive */
+  }
+
+  .contenido {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .historial-box {
+    padding: 15px;
+  }
+  .footer {
+    flex-direction: column;
+  }
+
+  .contenido_footer1 p,
+  .contenido_footer2 p {
+    font-size: 1.5rem;
+    font-family: "Quicksand", sans-serif;
+  }
+  .contenido_footer2 img {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+}
+
+/* Tablets y pantallas medianas */
+@media (min-width: 701px) and (max-width: 1024px) {
+  .footer {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    text-align: center;
+    height: auto;
+  }
+
+  .contenido_footer1,
+  .contenido_footer2 {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .contenido_footer1 p,
+  .contenido_footer2 p {
+    font-size: 1rem;
+  }
+}

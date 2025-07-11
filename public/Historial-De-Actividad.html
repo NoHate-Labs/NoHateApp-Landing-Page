@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Historial de Actividad - NoHate Labs</title>
-    <link rel="stylesheet" href="styles-Historial-de-Actividad.css" />
+    <link rel="stylesheet" href="assets/styles/Historial-de-Actividad.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,22 +14,26 @@
   </head>
   <body>
     <!-- ENCABEZADO -->
-    <header class="encabezado">
-      <div class="logo">
-        <img src="assets/images/NOHATE-LABS-logo.jpg" alt="Logo NoHate Labs" />
-        <span>NoHate Labs</span>
+    <nav class="top-header">
+      <div class="contenido-logo">
+        <a class="logo" href="index.html">
+          <img src="assets/images/logo.png" alt="Logo NoHate Labs" />
+        </a>
+        <h1 class="titulo-logo">NoHate Labs</h1>
       </div>
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-        ☰
-      </button>
-      <nav class="nav-superior" id="navMenu">
-        <a href="#">Inicio</a>
-        <a href="#">Funciones Principales</a>
-        <a href="#">Beneficios</a>
-        <a href="#">Comienza Ahora</a>
-        <a href="#">Inicia Sesión</a>
-      </nav>
-    </header>
+      <!-- BOTÓN HAMBURGUESA -->
+      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+      <!-- MENÚ DE NAVEGACIÓN -->
+      <ul class="menu-horizontal">
+        <li><a href="index.html">Inicio</a></li>
+        <li>
+          <a href="Funcionalidades-principales.html">Funciones Principales</a>
+        </li>
+        <li><a href="Beneficios.html">Beneficios</a></li>
+        <li><a href="ComienzaAhora.html">Comienza Ahora</a></li>
+        <li><a href="login.html">Inicia Sesión</a></li>
+      </ul>
+    </nav>
 
     <!-- CONTENEDOR PRINCIPAL -->
     <div class="contenedor-principal">
@@ -60,13 +64,18 @@
       </main>
     </div>
 
+    <footer class="footer">
+      <div class="contenido_footer1">
+        <p>NoHate Labs - <span id="anio"></span></p>
+      </div>
+      <div class="contenido_footer2">
+        <p>Contáctanos en:</p>
+        <img src="assets/images/LogoInstagram.png" alt="Logo de Instagram" />
+        <img src="assets/images/LogoCorreo.png" alt="Logo del correo" />
+      </div>
+    </footer>
+
     <!-- JavaScript para el botón hamburguesa -->
-    <script>
-      const toggle = document.getElementById("menuToggle");
-      const nav = document.getElementById("navMenu");
-      toggle.addEventListener("click", () => {
-        nav.classList.toggle("mostrar");
-      });
-    </script>
+    <script src="assets/scripts/main.js"></script>
   </body>
 </html>
