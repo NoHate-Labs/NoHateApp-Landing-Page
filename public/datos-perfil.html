@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NoHate Labs - Datos Perfil</title>
-    <link rel="stylesheet" href="assets/styles/seguridad-cuenta.css" />
+    <link rel="stylesheet" href="assets/styles/datos-perfil.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,103 +39,102 @@
     <div class="contenedor-principal">
       <!-- MENÚ LATERAL -->
       <aside class="menu-lateral">
-        <button class="btn-lateral">Datos de Perfil</button>
-        <button class="btn-lateral activo">Seguridad de la Cuenta</button>
-        <button class="btn-lateral">Historial de Actividad</button>
+        <a href="#" class="btn-lateral activo">Datos de Perfil</a>
+        <a href="seguridad-cuenta.html" class="btn-lateral"
+          >Seguridad de la Cuenta</a
+        >
+        <a href="Historial-de-Actividad.html" class="btn-lateral"
+          >Historial de Actividad</a
+        >
       </aside>
 
       <!-- CONTENIDO DE SEGURIDAD -->
       <main class="contenido">
-        <h1>SEGURIDAD DE LA CUENTA</h1>
+        <h1>DATOS DE PERFIL</h1>
 
-        <div class="seccion-seguridad">
-          <!-- CAMBIO DE CONTRASEÑA -->
+        <form class="form-datos-perfil" class="formulario">
+          <!-- DATOS DE PERFIL -->
           <div class="columna">
-            <h3>Cambiar contraseña</h3>
-            <form id="form-cambiar-contraseña" class="formulario">
-              <input
-                type="password"
-                placeholder="Contraseña Actual"
-                name="pw-actual"
-              />
-              <input
-                type="password"
-                placeholder="Nueva contraseña"
-                name="pw-nuevo"
-              />
-              <input
-                type="password"
-                placeholder="Confirmar nueva contraseña"
-                name="pw-confirmar"
-              />
-              <button id="btn-cambiar-contraseña" class="btn-accion">
-                Cambiar contraseña
-              </button>
-            </form>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
+
+            <label for="correo">Correo electrónico</label>
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              placeholder="Correo electrónico"
+            />
+
+            <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" />
           </div>
 
           <!-- ACCIONES A LA DERECHA -->
           <div class="columna">
-            <div>
-              <h3>Eliminación de cuenta</h3>
-              <button id="btn-eliminar" class="btn-accion">
-                Eliminar cuenta
-              </button>
-            </div>
-            <div>
-              <h3>Vincular cuenta de Google</h3>
-              <button id="btn-vincular" class="btn-accion">Vincular</button>
-            </div>
+            <label for="apellido-paterno">Apellido Paterno</label>
+            <input
+              type="text"
+              id="apellido-paterno"
+              name="apellido-paterno"
+              placeholder="Apellido Paterno"
+            />
+
+            <label for="apellido-materno">Apellido Materno</label>
+            <input
+              type="text"
+              id="apellido-materno"
+              name="apellido-materno"
+              placeholder="Apellido Materno"
+            />
+          </div>
+        </form>
+
+        <div class="datos-perfil" class="formulario">
+          <!-- DATOS DE PERFIL -->
+          <div class="columna">
+            <h3 for="nombre">Nombre</h3>
+            <p>Nombre</p>
+
+            <h3 for="correo">Correo electrónico</h3>
+            <p>Correo electrónico</p>
+
+            <h3 for="fecha-nacimiento">Fecha de Nacimiento</h3>
+            <p>Fecha de Nacimiento</p>
+          </div>
+
+          <!-- ACCIONES A LA DERECHA -->
+          <div class="columna">
+            <h3 for="apellido-paterno">Apellido Paterno</h3>
+            <p>Apellido Paterno</p>
+
+            <h3 for="apellido-materno">Apellido Materno</h3>
+            <p>Apellido Materno</p>
+ 
+            <h3>Cuenta de Google</h3>
+            <p id="estado-google">Vinculado a correo de cuenta de google</p>
           </div>
         </div>
+
+        <button id="btn-modificar-datos" class="btn-accion">
+          Modificar datos
+        </button>
+
+        <button id="btn-confirmar" class="btn-accion">
+          Confirmar
+        </button>
       </main>
     </div>
 
     <!-- POP-UP DE CONFIRMACIÓN -->
     <div class="popup" id="popup-confirmacion">
       <div class="popup-contenido">
-        <h2>CAMBIO DE CONTRASEÑA</h2>
-        <p><strong>Contraseña cambiada correctamente</strong></p>
+        <h2>PERFIL DE USUARIO</h2>
+        <p><strong>Datos modificados correctamente</strong></p>
         <button class="boton-cerrar btn-accion">Aceptar</button>
       </div>
     </div>
-    <!-- POP-UP DE ELIMINACIÓN DE CUENTA -->
-    <div class="popup" id="popup-eliminar">
-      <div class="popup-contenido">
-        <h2>ELIMINAR CUENTA</h2>
-        <p>
-          <strong>Eliminar la cuenta implica:</strong><br />
-          1. Perder el acceso a la cuenta y a todas las actividades en la
-          aplicación<br />
-          2. No podrás recuperar la información almacenada en la cuenta<br />
-          3. Esta acción no se puede deshacer
-        </p>
-        <p>
-          Escribe la palabra <strong>CONFIRMAR</strong> y presiona el botón
-          Eliminar para eliminar la cuenta permanentemente
-        </p>
-        <input
-          type="text"
-          id="confirmarTexto"
-          placeholder="Escriba CONFIRMAR"
-        />
 
-        <!-- Botones -->
-        <div class="botones-popup">
-          <button id="confirmarEliminar" class="btn-accion">Eliminar</button>
-          <button id="cancelarEliminar" class="btn-accion">Cancelar</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- POP-UP DE VINCULACIÓN -->
-    <div class="popup" id="popup-vincular">
-      <div class="popup-contenido">
-        <h2>VINCULACIÓN A CUENTA DE GOOGLE</h2>
-        <p>Cuenta de google vinculada correctamente</p>
-        <button class="boton-cerrar btn-accion">Aceptar</button>
-      </div>
-    </div>
 
     <footer class="footer">
       <div class="contenido_footer1">
@@ -149,7 +148,7 @@
     </footer>
 
     <!-- Enlace al JS externo -->
-    <script src="assets/scripts/seguridad.js"></script>
+    <script src="assets/scripts/datos-perfil.js"></script>
     <script src="assets/scripts/main.js"></script>
   </body>
 </html>
