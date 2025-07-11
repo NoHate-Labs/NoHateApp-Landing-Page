@@ -17,3 +17,9 @@ if (form) {
     }
   });
 }
+
+// Validar email
+function validateEmail(email) {
+  const re = /^[a-zA-Z0-9._]+@[a-zA-Z]+\.[a-zA-Z]/;
+  return re.test(String(email).toLowerCase());
+}
