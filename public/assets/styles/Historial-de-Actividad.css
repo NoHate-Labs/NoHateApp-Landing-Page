@@ -52,7 +52,6 @@ body {
   list-style: none;
   display: flex;
   gap: 1rem;
-  margin: 0;
   padding: 0;
   font-family: "Lato", sans-serif;
   margin-left: auto;
@@ -85,12 +84,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 40px 0 0 0;
+  padding: 20px 0;
 }
 
 .btn-lateral {
   width: 250px;
   padding: 24px;
+  background-color: #5de0e6;
   color: black;
   font-weight: bold;
   border: none;
@@ -99,45 +99,22 @@ body {
   text-align: left;
   transition: background-color 0.3s;
   font-size: 1.25rem; /* Tamaño de fuente más grande */
+  text-decoration: none;
 }
 
-/* === BOTONES LATERALES INDIVIDUALES CON COLOR PERSONALIZADO === */
-.btn-lateral.btn-1 {
-  background-color: #c6f7ff;
-}
-.btn-lateral.btn-2 {
-  background-color: #c6f7ff;
-}
-.btn-lateral.btn-3 {
-  background-color: #b6ebed;
-}
-
-/* === HOVER PARA CADA BOTÓN === */
-.btn-lateral.btn-1:hover {
+.btn-lateral:hover {
   background-color: #b3f0ff;
-}
-.btn-lateral.btn-2:hover {
-  background-color: #adeffa;
-}
-.btn-lateral.btn-3:hover {
-  background-color: #a1dddf;
+  color: #000;
 }
 
-/* === ACTIVO SOLO MANTIENE EL COLOR ORIGINAL === */
-.btn-lateral.activo.btn-1 {
+.btn-lateral.activo {
   background-color: #c6f7ff;
-}
-.btn-lateral.activo.btn-2 {
-  background-color: #c6f7ff;
-}
-.btn-lateral.activo.btn-3 {
-  background-color: #5de0e6;
 }
 
 /* === CONTENIDO === */
 .contenido {
-  background-color: #5cebec;
-  padding: 30px;
+  background-color: #5DE0E680;
+  padding: 30px 30px 6rem 30px;
   border-radius: 14px;
   flex-grow: 1;
   display: flex;
@@ -146,8 +123,6 @@ body {
   max-width: 800px;
   margin: 0 auto;
   min-height: 450px;
-  height: fit-content;
-  box-sizing: border-box;
 }
 
 .contenido h1 {
@@ -261,9 +236,13 @@ body {
     border-radius: 0px;
   }
 
+  .contenido h1 {
+    font-size: 2rem;
+  }
+
   .contenedor-principal {
     flex-direction: column;
-    padding: 8rem 20px 30px 20px;
+    padding: 6rem 20px 30px 20px;
     align-items: center;
   }
 
@@ -273,13 +252,13 @@ body {
     align-items: center;
     width: 100%;
     gap: 10px;
-    margin: 0 0 20px 0;
+    padding: 20px 0;
   }
 
   .btn-lateral {
     width: auto;
     padding: 12px 18px;
-    font-size: 1.25rem;
+    font-size: 0.85rem;
     text-align: center;
     border-radius: 12px; /* borde solo en responsive */
   }
@@ -309,6 +288,10 @@ body {
 
 /* Tablets y pantallas medianas */
 @media (min-width: 701px) and (max-width: 1024px) {
+  .contenido h1 {
+    font-size: 2rem;
+  }
+
   .footer {
     flex-direction: column;
     padding: 1rem;
