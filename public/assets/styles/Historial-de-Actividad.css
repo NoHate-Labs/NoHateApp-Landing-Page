@@ -1,22 +1,21 @@
-/* === FUENTE Y FONDO === */
 body {
   margin: 0; /* Elimina el margen exterior del navegador */
   padding: 0rem; /* Espaciado interno general */
   box-sizing: border-box; /* Incluye padding y border en los tamaños */
-  background-color: #f2f2f2; /* Color de fondo suave */
+  background-color: #f1f1f1;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   font-family: "Lato", sans-serif;
 }
 
-/* === ENCABEZADO GENERAL === */
+/* === ENCABEZADO === */
 .top-header {
   position: fixed; /* Fija el menú en la parte superior */
   background-color: #5de0e6; /* Fondo celeste brillante para visibilidad */
   width: 100%; /* Ocupa todo el ancho de la pantalla */
   z-index: 100; /* Se asegura de estar por encima de otros elementos */
-  height: 6.25rem; /* Altura fija del menú (100px) */
+  height: 6.25rem; /* Altura fija del menú (8rem) */
   display: flex; /* Activa Flexbox para alinear los elementos internos */
   align-items: center; /* Centrado vertical */
   justify-content: space-between; /* Separación entre logo y menú */
@@ -71,21 +70,21 @@ body {
   font-weight: bold;
   font-family: "Lato", sans-serif;
 }
-
 /* === CONTENEDOR PRINCIPAL === */
 .contenedor-principal {
   display: flex;
   padding: 8rem 30px 30px 0;
   gap: 20px;
-  flex: 2;
+  flex: 2; /* Ocupa el espacio restante del contenedor */
   align-items: center;
 }
 
+/* === MENÚ LATERAL === */
 .menu-lateral {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 20px 0;
+  padding: 20px 0;
 }
 
 .btn-lateral {
@@ -94,14 +93,15 @@ body {
   background-color: #5de0e6;
   color: black;
   font-weight: bold;
-  font-size: 1.25rem;
   border: none;
-  border-radius: 0;
   font-family: "Lato", sans-serif;
   cursor: pointer;
   text-align: left;
+  transition: background-color 0.3s;
+  font-size: 1.25rem; /* Tamaño de fuente más grande */
   text-decoration: none;
 }
+
 .btn-lateral:hover {
   background-color: #b3f0ff;
   color: #000;
@@ -125,149 +125,38 @@ body {
   min-height: 450px;
 }
 
-.contenido h1,
-.contenido h2 {
+.contenido h1 {
   font-family: "Quicksand", sans-serif;
-  font-size: 1.8rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 30px;
   color: #000;
   text-align: center;
 }
-.contenido h1 {
-  font-size: 3rem;
-}
 
-/* === SECCIÓN DE SEGURIDAD === */
-.seccion-seguridad {
-  display: flex;
-  gap: 60px;
+.historial-box {
   width: 100%;
-  justify-content: space-between;
-}
-
-.columna {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  box-sizing: border-box;
-}
-
-.columna h3,
-label {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #000;
-  margin-bottom: 1rem;
-}
-
-.formulario {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
-}
-
-/* === INPUTS === */
-input[type="password"],
-input[type="text"] {
-  padding: 10px;
-  border: none;
-  border-radius: 20px;
-  background-color: #c6f7ff;
-  font-family: "Lato", sans-serif;
-  width: 100%;
-  box-sizing: border-box;
-  height: 60px;
-}
-
-/* === BOTONES === */
-.btn-accion {
-  padding: 10px;
-  background-color: #5de0e6;
-  border: none;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #000;
-  transition: background 0.3s;
-  font-family: "Lato", sans-serif;
-  font-size: 1.25rem;
-}
-
-.btn-accion:hover,
-button:hover {
-  background-color: #5de0e6;
-}
-
-.btn-accion {
-  width: fit-content;
-  padding: 10px 1rem;
-  text-align: center;
-  align-self: center;
-}
-
-/* === POPUPS === */
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.popup-contenido {
-  background-color: #b6ffff;
-  padding: 30px 40px;
+  padding: 20px 30px;
   border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 0 10px #00000033;
-  width: 100%;
-  max-width: 400px;
+  max-width: 800px;
+  text-align: left;
 }
 
-.popup-contenido h2 {
-  font-family: "Quicksand", sans-serif;
-  margin-bottom: 20px;
-}
-
-.popup-contenido p {
-  margin-bottom: 20px;
+.historial-box h6 {
   font-size: 1rem;
-  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #000;
 }
 
-.popup-contenido input[type="text"] {
-  margin: 10px 0;
-  padding: 10px;
-  font-size: 0.95rem;
-}
-
-.popup-contenido button {
-  transition: background-color 0.3s;
+.historial-box p {
   margin-top: 10px;
-  display: inline-block;
-}
-
-.popup-contenido button:hover {
-  background-color: #42e4ff;
-}
-
-.botones-popup {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.botones-popup button {
-  flex: 1;
+  font-size: 1rem;
+  background-color: #c0f4fb;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #1a1a1a;
 }
 
 /* Oculta el botón hamburguesa en escritorio */
@@ -312,7 +201,6 @@ button:hover {
   height: 3.125rem;
 }
 
-
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .top-header {
@@ -328,7 +216,6 @@ button:hover {
   .menu-toggle {
     display: block;
   }
-
   .menu-horizontal {
     display: none;
     flex-direction: column;
@@ -353,7 +240,6 @@ button:hover {
     font-size: 2rem;
   }
 
-
   .contenedor-principal {
     flex-direction: column;
     padding: 6rem 20px 30px 20px;
@@ -373,36 +259,35 @@ button:hover {
     width: auto;
     padding: 12px 18px;
     font-size: 0.85rem;
-    border-radius: 12px;
     text-align: center;
+    border-radius: 12px; /* borde solo en responsive */
   }
 
-  .seccion-seguridad {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-  }
-
-  .columna {
+  .contenido {
     width: 100%;
-    align-items: center;
-    text-align: center;
+    padding: 20px;
   }
 
-  .popup-contenido {
-    max-width: 90%;
-    padding: 25px;
-  }
-
-  .popup-contenido button {
-    width: 100%;
+  .historial-box {
     padding: 15px;
+  }
+  .footer {
+    flex-direction: column;
+  }
+
+  .contenido_footer1 p,
+  .contenido_footer2 p {
+    font-size: 1.5rem;
+    font-family: "Quicksand", sans-serif;
+  }
+  .contenido_footer2 img {
+    width: 1.7rem;
+    height: 1.7rem;
   }
 }
 
 /* Tablets y pantallas medianas */
 @media (min-width: 701px) and (max-width: 1024px) {
-
   .contenido h1 {
     font-size: 2rem;
   }

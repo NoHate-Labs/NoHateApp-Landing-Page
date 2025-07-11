@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Historial de Actividad - NoHate Labs</title>
+    <link rel="stylesheet" href="assets/styles/Historial-de-Actividad.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Lato&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ENCABEZADO -->
+    <nav class="top-header">
+      <div class="contenido-logo">
+        <a class="logo" href="index.html">
+          <img src="assets/images/logo.png" alt="Logo NoHate Labs" />
+        </a>
+        <h1 class="titulo-logo">NoHate Labs</h1>
+      </div>
+      <!-- BOTÓN HAMBURGUESA -->
+      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+      <!-- MENÚ DE NAVEGACIÓN -->
+      <ul class="menu-horizontal">
+        <li><a href="index.html">Inicio</a></li>
+        <li>
+          <a href="Funcionalidades-principales.html">Funciones Principales</a>
+        </li>
+        <li><a href="Beneficios.html">Beneficios</a></li>
+        <li><a href="ComienzaAhora.html">Comienza Ahora</a></li>
+        <li><a href="login.html">Inicia Sesión</a></li>
+      </ul>
+    </nav>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="contenedor-principal">
+      <!-- MENÚ LATERAL -->
+      <aside class="menu-lateral">
+        <a href="datos-perfil.html" class="btn-lateral btn-1">Datos de Perfil</a>
+        <a href="seguridad-cuenta.html" class="btn-lateral btn-2">Seguridad de la Cuenta</a>
+        <a href="#" class="btn-lateral btn-3 activo">Historial de Actividad</a>
+      </aside>
+
+      <!-- CONTENIDO DEL HISTORIAL -->
+      <main class="contenido">
+        <h1>HISTORIAL DE ACTIVIDAD</h1>
+        <div class="historial-box">
+          <h6>Hoy</h6>
+          <p>Cambio de contraseña el 02/06/2025 a las 20:02 horas.</p>
+          <p>Inicio de sesión el 02/06/2025 a las 20:00 horas.</p>
+
+          <h6>Ayer</h6>
+          <p>Activación de notificaciones el 01/06/2025 a las 17:05 horas.</p>
+          <p>
+            Vinculación con cuenta de Google el 01/06/2025 a las 15:00 horas.
+          </p>
+
+          <h6>31/05/2025</h6>
+          <p>No se registraron acciones.</p>
+        </div>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <div class="contenido_footer1">
+        <p>NoHate Labs - <span id="anio"></span></p>
+      </div>
+      <div class="contenido_footer2">
+        <p>Contáctanos en:</p>
+        <img src="assets/images/LogoInstagram.png" alt="Logo de Instagram" />
+        <img src="assets/images/LogoCorreo.png" alt="Logo del correo" />
+      </div>
+    </footer>
+
+    <!-- JavaScript para el botón hamburguesa -->
+    <script src="assets/scripts/main.js"></script>
+  </body>
+</html>
