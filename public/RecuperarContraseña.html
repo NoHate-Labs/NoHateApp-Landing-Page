@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="assets/styles/RecuperarContraseña.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>NoHate Labs - Recuperar Contraseña</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"
+  </head>
+  <body>
+    <section id="left-side">
+      <header class="header">
+        <a class="logo" href="index.html">
+          <img src="assets/images/LogoNoHateLabs.png" alt="Logo NoHate Labs" />
+        </a>
+        <p>NoHate Labs</p>
+      </header>
+      <div class="contenido-recuperar">
+        <h1 class="titulo-recuperar">Recuperar contraseña</h1>
+        <h2 class="subtitulo-recuperar">Ingrese su correo electrónico</h2>
+        <form class="form-recuperar" id="form-recuperar" name="form-recuperar">
+          <div class="campo-correo">
+            <div class="icono-correo">
+              <img
+                src="assets/images/CorreoIcono.png"
+                alt="Correo Icono"
+                class="correo-icono"
+              />
+              <input
+                type="text"
+                id="email-recuperar"
+                name="email"
+                placeholder="Correo electrónico"
+              />
+            </div>
+          </div>
+          <button type="submit" class="recuperar-boton">
+            Recuperar contraseña
+            <a href="CambiarContraseña.html"></a>
+          </button>
+        </form>
+        <p class="iniciar-sesion-link">
+          ¿Recordaste tu contraseña?
+          <a href="login.html">Inicia Sesión</a>
+        </p>
+      </div>
+    </section>
+    <section id="right-side">
+      <div class="right-side-contenido">
+        <img
+          src="assets/images/ImagenAdolescente.png"
+          alt="Imagen adolescente"
+          class="recuperar-imagen"
+        />
+      </div>
+    </section>
+    <script src="assets/scripts/recuperar-contraseña.js"></script>
+  </body>
+</html>

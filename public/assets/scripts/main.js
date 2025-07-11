@@ -1,42 +1,66 @@
 // Función para mostrar el modal
 const botonHamburguesa = document.querySelector(".menu-toggle");
 const menu = document.querySelector(".menu-horizontal");
-botonHamburguesa.addEventListener("click", () => {
+botonHamburguesa?.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
 
-// Validación de inicio de sesión
-const testUser = {
-  email: "usuario@gmail.com",
-  password: "1234"
-};
+function obtenerUsuarioLogueado() {
+  const usuario = localStorage.getItem("usuarioLogueado");
+  return usuario ? JSON.parse(usuario) : null;
+}
 
-// Función para validar el inicio de sesión
-function iniciarSesion(event) {
-  event.preventDefault(); // Evita el envío del formulario
+function cerrarSesion() {
+  localStorage.removeItem("usuarioLogueado");
+  window.location.href = "index.html";
+}
 
-  // Obtén los valores del formulario
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+// Función para mostrar usuario logueado en el menú
+function mostrarUsuarioLogueado() {
+  const usuario = obtenerUsuarioLogueado();
+  const menuHorizontal = document.querySelector(".menu-horizontal");
 
-  // Validación simple
-  if (email === testUser.email && password === testUser.password) {
-      alert("¡Inicio de sesión exitoso!");
-      // Redirigir o realizar otra acción aquí
-  } else {
-      alert("Usuario o contraseña incorrectos.");
+  if (usuario && menuHorizontal) {
+    // Buscar el enlace de "Inicia Sesión"
+    const loginLink = menuHorizontal.querySelector('a[href="login.html"]');
+
+    if (loginLink) {
+      // Reemplazar con información del usuario
+      loginLink.innerHTML = `${usuario.nombre}`;
+      loginLink.href = "datos-perfil.html";
+
+      // Agregar opción de cerrar sesión
+      const cerrarSesionLi = document.createElement("li");
+      const cerrarSesionLink = document.createElement("a");
+      cerrarSesionLink.href = "#";
+      cerrarSesionLink.textContent = "Cerrar Sesión";
+      cerrarSesionLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        cerrarSesion();
+      });
+      cerrarSesionLi.appendChild(cerrarSesionLink);
+      menuHorizontal.appendChild(cerrarSesionLi);
+    }
   }
 }
 
-// Asocia la función al botón del formulario
-document.getElementById("loginForm")?.addEventListener("submit", iniciarSesion);
-
-
 //funcion para mostrar el año actual en el footer
 function mostrarAnioActual() {
-  const fecha = new Date();
-  const anioActual = fecha.getFullYear();
-  document.getElementById("anio").textContent = anioActual;
+  const anioElement = document.getElementById("anio");
+  if (anioElement) {
+    const fecha = new Date();
+    const anioActual = fecha.getFullYear();
+    anioElement.textContent = anioActual;
+  }
 }
 
-mostrarAnioActual();
+//validar email
+function validateEmail(femail1) {
+  const re = /^[a-zA-Z0-9._]+@[a-zA-Z]+\.[a-zA-Z]/;
+  return re.test(String(femail1).toLowerCase());
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  mostrarAnioActual();
+  mostrarUsuarioLogueado();
+});

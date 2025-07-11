@@ -1,22 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap");
-
 body {
   margin: 0; /* Elimina el margen exterior del navegador */
   padding: 0rem; /* Espaciado interno general */
   box-sizing: border-box; /* Incluye padding y border en los tamaños */
-  background-color: #f2f2f2; /* Color de fondo suave */
+  background-color: #f1f1f1;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-family: "Lato", sans-serif;
 }
 
+/* === ENCABEZADO === */
 .top-header {
   position: fixed; /* Fija el menú en la parte superior */
   background-color: #5de0e6; /* Fondo celeste brillante para visibilidad */
   width: 100%; /* Ocupa todo el ancho de la pantalla */
   z-index: 100; /* Se asegura de estar por encima de otros elementos */
-  height: 6.25rem; /* Altura fija del menú (100px) */
+  height: 6.25rem; /* Altura fija del menú (8rem) */
   display: flex; /* Activa Flexbox para alinear los elementos internos */
   align-items: center; /* Centrado vertical */
   justify-content: space-between; /* Separación entre logo y menú */
@@ -71,159 +70,94 @@ body {
   font-weight: bold;
   font-family: "Lato", sans-serif;
 }
-
-/* fondo */
-.inicio {
-  padding-top: 6rem;
-  padding-bottom: 2rem;
-  margin: 2rem;
-}
-
-/* parte 1 */
-
-.parte-1 {
+/* === CONTENEDOR PRINCIPAL === */
+.contenedor-principal {
   display: flex;
-  flex-direction: row;
+  padding: 8rem 30px 30px 0;
+  gap: 20px;
+  flex: 2; /* Ocupa el espacio restante del contenedor */
   align-items: center;
-  gap: 1rem;
 }
 
-/* texto parte 1*/
-.text-parte-1 {
-  width: 100%;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 5rem;
-  margin-right: 0;
-  padding-right: 0;
-  text-align: left;
+/* === MENÚ LATERAL === */
+.menu-lateral {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  align-items: flex-start;
+  padding: 20px 0;
 }
 
-/* texto principal */
-.parte-1-titulo {
-  flex: 1;
-  color: #5de0e6;
-  margin: 0;
-  font-size: 3rem;
-  font-family: "Quicksand", sans-serif;
+.btn-lateral {
+  width: 250px;
+  padding: 24px;
+  background-color: #5de0e6;
+  color: black;
   font-weight: bold;
-  text-align: left;
-}
-
-/* texto segundario */
-.inicio-contenido {
-  color: #1a1a1a;
-  margin: 0px;
-  font-family: "Quicksand", sans-serif;
-  flex: 1;
-  text-align: justify;
-  font-size: 1.25rem;
-}
-
-.inicio-contenido p {
-  max-width: 650px;
-  width: 100%;
-}
-
-/*imagen parte 1*/
-.inicio-imagen {
-  flex: 1;
-  margin-right: 2rem;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.inicio-imagen img {
-  width: 100%; /* Ocupa el ancho completo del contenedor */
-  height: auto; /* Mantiene la proporción */
-  border-radius: 5rem; /* Bordes redondeados */
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Sombra sutil */
-}
-
-.ingreso-texto {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  text-align: center;
-}
-
-.Quienes-Somos {
-  background-color: #c6f7ff;
-  text-align: center;
-  padding: 1rem 2rem 2rem;
-}
-.Quienes-Somos h2 {
-  font-family: "Quicksand", sans-serif;
-  font-size: 2rem;
-  color: #1a1a1a;
-  margin: 0;
-}
-
-.quienes-somos-contenido {
+  border: none;
   font-family: "Lato", sans-serif;
-  font-size: 1rem;
-  color: #1a1a1a;
-  display: flex;
-  flex-direction: row;
-  gap: 70px;
-  justify-content: space-between;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s;
+  font-size: 1.25rem; /* Tamaño de fuente más grande */
+  text-decoration: none;
 }
 
-.Separador-Quienes-Somos {
-  margin: 1rem 0 0 0;
-  flex: 1;
+.btn-lateral:hover {
+  background-color: #b3f0ff;
+  color: #000;
 }
 
-.Separador-Quienes-Somos span {
-  font-weight: bold;
-  font-style: italic;
+.btn-lateral.activo {
+  background-color: #c6f7ff;
 }
 
-.upc-logo img {
-  width: 84px;
-  height: 84px;
-}
-
-.lupa img {
-  width: 84px;
-  height: 84px;
-}
-
-.acierto img {
-  width: 74px;
-  height: 74px;
-  padding-bottom: 0.7rem;
-}
-
-.celular img {
-  height: 70px;
-  padding-bottom: 0.7rem;
-}
-.Propuesta-Valor {
-  padding: 1rem 2rem 2rem;
-  text-align: center;
+/* === CONTENIDO === */
+.contenido {
+  background-color: #5DE0E680;
+  padding: 30px 30px 6rem 30px;
+  border-radius: 14px;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 450px;
+  box-sizing: border-box;
 }
-.Propuesta-Valor h2 {
+
+.contenido h1 {
   font-family: "Quicksand", sans-serif;
-  font-size: 2rem;
-  color: #1a1a1a;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #000;
   text-align: center;
-  flex: 0.2;
 }
-.Propuesta-Valor p {
-  font-family: "Quicksand", sans-serif;
-  font-size: 2rem;
+
+.historial-box {
+  width: 100%;
+  padding: 20px 30px;
+  border-radius: 12px;
+  max-width: 800px;
+  text-align: left;
+}
+
+.historial-box h6 {
+  font-size: 1rem;
+  margin-top: 20px;
   font-weight: bold;
-  color: #5de0e6;
-  text-align: center;
-  margin: 0.5rem auto;
-  max-width: 1000px;
+  color: #000;
+}
+
+.historial-box p {
+  margin-top: 10px;
+  font-size: 1rem;
+  background-color: #c0f4fb;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #1a1a1a;
 }
 
 /* Oculta el botón hamburguesa en escritorio */
@@ -268,8 +202,7 @@ body {
   height: 3.125rem;
 }
 
-/* Media Queries Responsivas */
-/* Moviles*/
+/* === RESPONSIVE === */
 @media (max-width: 768px) {
   .top-header {
     padding: 0 1rem;
@@ -304,68 +237,41 @@ body {
     border-radius: 0px;
   }
 
-  .parte-1 {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 1rem;
-  }
-
-  .text-parte-1 {
-    order: 1;
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .parte-1-titulo {
-    text-align: center;
-  }
-
-  .inicio-contenido p {
-    width: 100%;
-    max-width: 90vw;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .inicio-imagen {
-    order: 2;
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .inicio-imagen img {
-    width: 90%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 2rem;
-  }
-
-  .quienes-somos-contenido {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  h2 {
+  .contenido h1 {
     font-size: 2rem;
   }
 
-  h3 {
-    font-size: 1.5rem;
+  .contenedor-principal {
+    flex-direction: column;
+    padding: 6rem 20px 30px 20px;
+    align-items: center;
   }
 
-  .Propuesta-Valor p {
-    font-size: 1.5rem;
+  .menu-lateral {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding: 20px 0;
   }
 
+  .btn-lateral {
+    width: auto;
+    padding: 12px 18px;
+    font-size: 0.85rem;
+    text-align: center;
+    border-radius: 12px; /* borde solo en responsive */
+  }
+
+  .contenido {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .historial-box {
+    padding: 15px;
+  }
   .footer {
     flex-direction: column;
   }
@@ -383,6 +289,10 @@ body {
 
 /* Tablets y pantallas medianas */
 @media (min-width: 701px) and (max-width: 1024px) {
+  .contenido h1 {
+    font-size: 2rem;
+  }
+
   .footer {
     flex-direction: column;
     padding: 1rem;
