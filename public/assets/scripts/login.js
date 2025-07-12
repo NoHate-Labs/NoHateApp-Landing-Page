@@ -46,12 +46,21 @@ function iniciarSesionConGoogle() {
     return;
   }
 
-  // Tomar el primer usuario de la lista
-  const primerUsuario = usuarios[0];
+  const usuarioGoogleExiste = usuarios.find(
+    (user) => user.email === "usuario@gmail.com"
+  );
+
+  let usuarioLogin;
+
+  if (usuarioGoogleExiste) {
+    usuarioLogin = usuarioGoogleExiste;
+  } else {
+    usuarioLogin = usuarios[0]; // Tomar el primer usuario si no hay un usuario específico de Google
+  }
   
   // Guardar usuario logueado
-  guardarUsuarioLogueado(primerUsuario);
-  alert(`¡Inicio de sesión con Google exitoso! Bienvenido ${primerUsuario.nombre}`);
+  guardarUsuarioLogueado(usuarioLogin);
+  alert(`¡Inicio de sesión con Google exitoso! Bienvenido ${usuarioLogin.nombre}`);
   window.location.href = "index.html";
 }
 
