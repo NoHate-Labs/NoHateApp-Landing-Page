@@ -79,9 +79,12 @@ function registrarUsuario(event) {
 // Función para registrar con Google
 function registrarConGoogle() {
   const usuarios = obtenerUsuarios();
-
-  if (usuarios.length > 0) {
-    alert("Ya existe un usuario registrado. Por favor, inicie sesión.");
+  const usuarioGoogleExiste = usuarios.find(
+    (user) => user.email === "usuario@gmail.com"
+  );
+  
+  if (usuarioGoogleExiste) {
+    alert("Ya existe una cuenta de Google registrada. Por favor, inicie sesión.");
     window.location.href = "login.html";
     return;
   }
